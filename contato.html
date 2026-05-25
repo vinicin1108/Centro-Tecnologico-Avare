@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contato | Centro Tecnológico UNEDUVALE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&family=Raleway:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+  <div id="readingProgress" class="reading-progress"></div>
+  <div class="floating-blobs" aria-hidden="true">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+  </div>
+  <div id="cursorSpotlight" class="cursor-spotlight" aria-hidden="true"></div>
+
+  <header class="topbar" id="topbar">
+    <div class="container header-flex">
+      <a href="home.html" class="brand" aria-label="Centro Tecnológico UNEDUVALE">
+        <img src="../assets/Logo-Centro-Tecnológico-Eduvale-site-300x104.png" alt="UNEDUVALE Logo" class="brand-logo" />
+      </a>
+      <nav class="main-nav" id="mainNav">
+        <a href="home.html#sobre">Institucional</a>
+        <a href="home.html#solucoes">Serviços</a>
+        <a href="cursos.html">Cursos</a>
+        <a href="projetos.html">Projetos</a>
+        <a href="agenda.html">Agenda</a>
+        <a href="docentes.html">Docentes</a>
+        <a href="inclusao.html">Inclusão Digital</a>
+        <a href="seguranca.html">Segurança</a>
+        <a href="contato.html">Contato</a>
+      </nav>
+      <div class="header-actions">
+        <button id="darkModeBtn" class="dark-mode-btn" aria-label="Alternar tema">
+          <span class="dark-mode-thumb"></span>
+        </button>
+        <a class="btn btn-cta" href="vestibular.html" style="text-decoration:none;">Inscreva-se</a>
+        <button id="burgerBtn" class="burger-btn" aria-label="Abrir menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="app-container">
+    <aside class="sidebar closed" id="sidebar">
+      <nav class="sidebar-nav">
+        <a href="home.html#sobre" class="sidebar-link">Institucional</a>
+        <a href="home.html#solucoes" class="sidebar-link">Serviços</a>
+        <a href="cursos.html" class="sidebar-link">Cursos</a>
+        <a href="projetos.html" class="sidebar-link">Projetos</a>
+        <a href="agenda.html" class="sidebar-link">Agenda</a>
+        <a href="docentes.html" class="sidebar-link">Docentes</a>
+        <a href="inclusao.html" class="sidebar-link">Inclusão Digital</a>
+        <a href="seguranca.html" class="sidebar-link">Segurança</a>
+        <a href="contato.html" class="sidebar-link">Contato</a>
+      </nav>
+    </aside>
+    <div id="sidebarOverlay" class="sidebar-overlay"></div>
+
+    <main class="main-content">
+      <section class="section hero-section" id="hero">
+        <div class="container hero-content">
+          <h1 style="margin-bottom:0.75rem;">Contato</h1>
+          <p class="hero-subtitle" style="max-width: 860px; margin:0 auto;">Tire suas dúvidas com o time do Centro Tecnológico.</p>
+        </div>
+      </section>
+
+      <section class="section" id="contato-section">
+        <div class="container contact-grid" style="align-items:start;">
+          <div class="contact-card">
+            <h2>Fale com a UNEDUVALE</h2>
+            <p>Av. Pref. Misael Euphrásio Leal, 347, Avaré-SP</p>
+            <p>📞 (14) 3733-8585 | (14) 3733-8383 | WhatsApp (14) 99623-8383</p>
+            <p>✉️ comercial@eduvaleavare.com.br</p>
+            <p>Instagram: <a href="https://www.instagram.com/uneduvale" target="_blank" rel="noreferrer">@uneduvale</a></p>
+          </div>
+
+          <form id="contactForm" class="contact-card form-card" onsubmit="handleForm(event)">
+            <h2>Fale Conosco</h2>
+            <label>Nome<input type="text" name="name" required /></label>
+            <label>E-mail<input type="email" name="email" required /></label>
+            <label>Curso de interesse<input type="text" name="interest" placeholder="Análise e Desenvolvimento de Sistemas" /></label>
+            <label>Mensagem<textarea name="message" rows="4" required></textarea></label>
+            <button type="submit" class="btn btn-primary lava-btn">Enviar</button>
+          </form>
+        </div>
+
+        <div class="container" style="margin-top:1.5rem;">
+          <article class="map-card glass-card">
+            <h2>Localização</h2>
+            <div class="map-wrapper">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3705.3205196866746!2d-48.91726468473939!3d-23.078956484936748!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c8cd87ff1a2cd3%3A0x2f8b57d3a5f223d0!2sCentro%20Universit%C3%A1rio%20UNEDUVALE!5e0!3m2!1spt-BR!2sbr!4v1700000000000"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                allowfullscreen=""
+                aria-label="Mapa de localização da UNEDUVALE"></iframe>
+            </div>
+            <p class="map-phrase">Venha conhecer o lugar onde tecnologia, paixão e futuro se encontram para transformar sua carreira.</p>
+          </article>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <p>&copy; 2026 Centro Tecnológico | Centro Universitário UNEDUVALE. Todos os direitos reservados.</p>
+      <p>Desenvolvido com ❤️ para um futuro mais conectado e inovador.</p>
+    </div>
+  </footer>
+
+  <button id="backToTopBtn" class="back-to-top-btn" aria-label="Voltar ao topo">↑</button>
+  <div id="toastContainer" class="toast-container"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="../javascript/app.js"></script>
+</body>
+</html>
+

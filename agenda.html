@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agenda | Centro Tecnológico UNEDUVALE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&family=Raleway:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+  <div id="readingProgress" class="reading-progress"></div>
+  <div class="floating-blobs" aria-hidden="true">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+  </div>
+  <div id="cursorSpotlight" class="cursor-spotlight" aria-hidden="true"></div>
+
+  <header class="topbar" id="topbar">
+    <div class="container header-flex">
+      <a href="home.html" class="brand" aria-label="Centro Tecnológico UNEDUVALE">
+        <img src="../assets/Logo-Centro-Tecnológico-Eduvale-site-300x104.png" alt="UNEDUVALE Logo" class="brand-logo" />
+      </a>
+      <nav class="main-nav" id="mainNav">
+        <a href="home.html#sobre">Institucional</a>
+        <a href="home.html#solucoes">Serviços</a>
+        <a href="cursos.html">Cursos</a>
+        <a href="projetos.html">Projetos</a>
+        <a href="agenda.html">Agenda</a>
+        <a href="docentes.html">Docentes</a>
+        <a href="inclusao.html">Inclusão Digital</a>
+        <a href="seguranca.html">Segurança</a>
+        <a href="contato.html">Contato</a>
+      </nav>
+      <div class="header-actions">
+        <button id="darkModeBtn" class="dark-mode-btn" aria-label="Alternar tema">
+          <span class="dark-mode-thumb"></span>
+        </button>
+        <a class="btn btn-cta" href="vestibular.html" style="text-decoration:none;">Inscreva-se</a>
+        <button id="burgerBtn" class="burger-btn" aria-label="Abrir menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="app-container">
+    <aside class="sidebar closed" id="sidebar">
+      <nav class="sidebar-nav">
+        <a href="home.html#sobre" class="sidebar-link">Institucional</a>
+        <a href="home.html#solucoes" class="sidebar-link">Serviços</a>
+        <a href="cursos.html" class="sidebar-link">Cursos</a>
+        <a href="projetos.html" class="sidebar-link">Projetos</a>
+        <a href="agenda.html" class="sidebar-link">Agenda</a>
+        <a href="docentes.html" class="sidebar-link">Docentes</a>
+        <a href="inclusao.html" class="sidebar-link">Inclusão Digital</a>
+        <a href="seguranca.html" class="sidebar-link">Segurança</a>
+        <a href="contato.html" class="sidebar-link">Contato</a>
+      </nav>
+    </aside>
+    <div id="sidebarOverlay" class="sidebar-overlay"></div>
+
+    <main class="main-content">
+      <section class="section hero-section" id="hero">
+        <div class="container hero-content">
+          <h1 style="margin-bottom:0.75rem;">Agenda</h1>
+          <p class="hero-subtitle" style="max-width: 860px; margin:0 auto;">Eventos futuros do Centro Tecnológico.</p>
+        </div>
+      </section>
+
+      <section class="section glass-card">
+        <div class="container">
+          <div class="section-heading">
+            <span class="section-label">Próximos eventos</span>
+            <h2>Data, horário e local</h2>
+            <p class="subtitle">Informações em formato simples.</p>
+          </div>
+
+          <div class="info-grid" style="margin-top:2rem;">
+            <article>
+              <h3>Tech Day UNEDUVALE</h3>
+              <p><strong>Data:</strong> 12/06/2026</p>
+              <p><strong>Horário:</strong> 19:00</p>
+              <p><strong>Local:</strong> Auditório Centro Tecnológico</p>
+            </article>
+            <article>
+              <h3>Workshop de Projetos Reais</h3>
+              <p><strong>Data:</strong> 25/06/2026</p>
+              <p><strong>Horário:</strong> 18:30</p>
+              <p><strong>Local:</strong> Laboratório de Desenvolvimento</p>
+            </article>
+            <article>
+              <h3>Feira de Estágio</h3>
+              <p><strong>Data:</strong> 10/07/2026</p>
+              <p><strong>Horário:</strong> 09:00</p>
+              <p><strong>Local:</strong> Pátio do Campus</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <p>&copy; 2026 Centro Tecnológico | Centro Universitário UNEDUVALE. Todos os direitos reservados.</p>
+      <p>Desenvolvido com ❤️ para um futuro mais conectado e inovador.</p>
+    </div>
+  </footer>
+
+  <button id="backToTopBtn" class="back-to-top-btn" aria-label="Voltar ao topo">↑</button>
+  <div id="toastContainer" class="toast-container"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="../javascript/app.js"></script>
+</body>
+</html>
+

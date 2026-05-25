@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grade Curricular | Centro Tecnológico UNEDUVALE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&family=Raleway:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+  <div id="readingProgress" class="reading-progress"></div>
+  <div class="floating-blobs" aria-hidden="true">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+  </div>
+  <div id="cursorSpotlight" class="cursor-spotlight" aria-hidden="true"></div>
+
+  <header class="topbar" id="topbar">
+    <div class="container header-flex">
+      <a href="home.html" class="brand" aria-label="Centro Tecnológico UNEDUVALE">
+        <img src="../assets/Logo-Centro-Tecnológico-Eduvale-site-300x104.png" alt="UNEDUVALE Logo" class="brand-logo" />
+      </a>
+      <nav class="main-nav" id="mainNav">
+        <a href="home.html#sobre">Institucional</a>
+        <a href="home.html#solucoes">Serviços</a>
+        <a href="cursos.html">Cursos</a>
+        <a href="projetos.html">Projetos</a>
+        <a href="agenda.html">Agenda</a>
+        <a href="docentes.html">Docentes</a>
+        <a href="inclusao.html">Inclusão Digital</a>
+        <a href="seguranca.html">Segurança</a>
+        <a href="contato.html">Contato</a>
+      </nav>
+      <div class="header-actions">
+        <button id="darkModeBtn" class="dark-mode-btn" aria-label="Alternar tema">
+          <span class="dark-mode-thumb"></span>
+        </button>
+        <a class="btn btn-cta" href="vestibular.html" style="text-decoration:none;">Inscreva-se</a>
+        <button id="burgerBtn" class="burger-btn" aria-label="Abrir menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="app-container">
+    <aside class="sidebar closed" id="sidebar">
+      <nav class="sidebar-nav">
+        <a href="home.html#sobre" class="sidebar-link">Institucional</a>
+        <a href="home.html#solucoes" class="sidebar-link">Serviços</a>
+        <a href="cursos.html" class="sidebar-link">Cursos</a>
+        <a href="projetos.html" class="sidebar-link">Projetos</a>
+        <a href="agenda.html" class="sidebar-link">Agenda</a>
+        <a href="docentes.html" class="sidebar-link">Docentes</a>
+        <a href="inclusao.html" class="sidebar-link">Inclusão Digital</a>
+        <a href="seguranca.html" class="sidebar-link">Segurança</a>
+        <a href="contato.html" class="sidebar-link">Contato</a>
+      </nav>
+    </aside>
+    <div id="sidebarOverlay" class="sidebar-overlay"></div>
+
+    <main class="main-content">
+      <section class="section hero-section" id="hero">
+        <div class="container hero-content">
+          <h1 style="margin-bottom:0.75rem;">Grade Curricular</h1>
+          <p class="hero-subtitle" style="max-width: 820px; margin:0 auto;">6 períodos · 3 anos · formação intensiva e prática.</p>
+        </div>
+      </section>
+
+      <section class="section grade-section" id="grade">
+        <div class="container">
+          <div class="section-heading">
+            <span class="section-label">Grade Curricular</span>
+            <h2>Análise e Desenvolvimento de Sistemas</h2>
+            <p class="subtitle">Visão geral dos semestres e principais disciplinas.</p>
+          </div>
+
+          <div class="grade-timeline">
+            <div class="timeline-line" aria-hidden="true"></div>
+
+            <article class="grade-period">
+              <div class="period-marker" aria-hidden="true">
+                <span class="period-number">1</span>
+                <span class="period-semester">SEM</span>
+              </div>
+              <div class="period-content glass-card neon-card hover-lift">
+                <div class="period-header">
+                  <h3>1º Período — Fundamentos</h3>
+                  <span class="period-hours">300h</span>
+                </div>
+                <p class="period-desc">Base sólida em lógica, algoritmos e pensamento computacional.</p>
+                <ul class="subject-list">
+                  <li><span class="subject-tag teoria">Teoria</span> Introdução à Programação <em>80h</em></li>
+                  <li><span class="subject-tag teoria">Teoria</span> Lógica de Programação <em>60h</em></li>
+                  <li><span class="subject-tag pratica">Prática</span> Banco de Dados I (SQL) <em>60h</em></li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="grade-period">
+              <div class="period-marker" aria-hidden="true">
+                <span class="period-number">2</span>
+                <span class="period-semester">SEM</span>
+              </div>
+              <div class="period-content glass-card neon-card hover-lift">
+                <div class="period-header">
+                  <h3>2º Período — Estruturas</h3>
+                  <span class="period-hours">300h</span>
+                </div>
+                <p class="period-desc">Aprofundamento em POO, estruturas de dados e redes de computadores.</p>
+                <ul class="subject-list">
+                  <li><span class="subject-tag pratica">Prática</span> Programação Orientada a Objetos <em>80h</em></li>
+                  <li><span class="subject-tag teoria">Teoria</span> Estrutura de Dados <em>60h</em></li>
+                  <li><span class="subject-tag pratica">Prática</span> Banco de Dados II (NoSQL) <em>60h</em></li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="grade-period">
+              <div class="period-marker" aria-hidden="true">
+                <span class="period-number">3</span>
+                <span class="period-semester">SEM</span>
+              </div>
+              <div class="period-content glass-card neon-card hover-lift">
+                <div class="period-header">
+                  <h3>3º Período — Web & Software</h3>
+                  <span class="period-hours">300h</span>
+                </div>
+                <p class="period-desc">Desenvolvimento web, engenharia de software e primeiras arquiteturas.</p>
+                <ul class="subject-list">
+                  <li><span class="subject-tag pratica">Prática</span> Desenvolvimento Frontend <em>80h</em></li>
+                  <li><span class="subject-tag pratica">Prática</span> Desenvolvimento Backend <em>80h</em></li>
+                  <li><span class="subject-tag teoria">Teoria</span> Arquitetura de Sistemas <em>60h</em></li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="grade-period">
+              <div class="period-marker" aria-hidden="true">
+                <span class="period-number">4</span>
+                <span class="period-semester">SEM</span>
+              </div>
+              <div class="period-content glass-card neon-card hover-lift">
+                <div class="period-header">
+                  <h3>4º Período — Full-Stack</h3>
+                  <span class="period-hours">300h</span>
+                </div>
+                <p class="period-desc">Construção de aplicações completas com front-end, back-end e mobile.</p>
+                <ul class="subject-list">
+                  <li><span class="subject-tag pratica">Prática</span> Desenvolvimento Mobile <em>80h</em></li>
+                  <li><span class="subject-tag teoria">Teoria</span> Segurança da Informação <em>60h</em></li>
+                  <li><span class="subject-tag pratica">Prática</span> Qualidade e Testes <em>60h</em></li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="grade-period">
+              <div class="period-marker" aria-hidden="true">
+                <span class="period-number">5</span>
+                <span class="period-semester">SEM</span>
+              </div>
+              <div class="period-content glass-card neon-card hover-lift">
+                <div class="period-header">
+                  <h3>5º Período — Cloud & Dados</h3>
+                  <span class="period-hours">300h</span>
+                </div>
+                <p class="period-desc">Computação em nuvem, ciência de dados e arquiteturas escaláveis.</p>
+                <ul class="subject-list">
+                  <li><span class="subject-tag pratica">Prática</span> Cloud Computing <em>80h</em></li>
+                  <li><span class="subject-tag teoria">Teoria</span> Inteligência Artificial <em>60h</em></li>
+                  <li><span class="subject-tag projeto">Projeto</span> Projeto Integrador I <em>60h</em></li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="grade-period">
+              <div class="period-marker" aria-hidden="true">
+                <span class="period-number">6</span>
+                <span class="period-semester">SEM</span>
+              </div>
+              <div class="period-content glass-card neon-card hover-lift">
+                <div class="period-header">
+                  <h3>6º Período — Mercado & TCC</h3>
+                  <span class="period-hours">300h</span>
+                </div>
+                <p class="period-desc">Gestão de projetos, empreendedorismo e trabalho de conclusão.</p>
+                <ul class="subject-list">
+                  <li><span class="subject-tag teoria">Teoria</span> Governança de TI <em>60h</em></li>
+                  <li><span class="subject-tag pratica">Prática</span> Big Data / Análise de Dados <em>60h</em></li>
+                  <li><span class="subject-tag projeto">TCC</span> Estágio Supervisionado + TCC <em>80h</em></li>
+                </ul>
+              </div>
+            </article>
+          </div>
+
+          <div class="grade-legend glass-card">
+            <h4>Legenda das Disciplinas</h4>
+            <div class="legend-items">
+              <span><span class="legend-dot teoria"></span> Teoria</span>
+              <span><span class="legend-dot pratica"></span> Prática</span>
+              <span><span class="legend-dot projeto"></span> Projeto / TCC</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" style="padding-bottom: 2rem;">
+        <div class="container">
+          <h2 style="margin-bottom: 0.5rem;">Quer se inscrever?</h2>
+          <p class="subtitle" style="margin-bottom: 1.75rem;">Veja as informações do Vestibular.</p>
+          <a class="btn btn-cta" href="vestibular.html" style="text-decoration:none;">Ir para Vestibular</a>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <p>&copy; 2026 Centro Tecnológico | Centro Universitário UNEDUVALE. Todos os direitos reservados.</p>
+      <p>Desenvolvido com ❤️ para um futuro mais conectado e inovador.</p>
+    </div>
+  </footer>
+
+  <button id="backToTopBtn" class="back-to-top-btn" aria-label="Voltar ao topo">↑</button>
+  <div id="toastContainer" class="toast-container"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="../javascript/app.js"></script>
+</body>
+</html>
+

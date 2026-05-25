@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Centro Tecnológico | UNEDUVALE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&family=Raleway:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+
+  <div id="readingProgress" class="reading-progress"></div>
+
+  <div class="floating-blobs" aria-hidden="true">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+  </div>
+
+  <div id="cursorSpotlight" class="cursor-spotlight" aria-hidden="true"></div>
+
+  <header class="topbar" id="topbar">
+    <div class="container header-flex">
+
+
+      <nav class="main-nav" id="mainNav">
+        <a href="#sobre">Institucional</a>
+        <a href="#solucoes">Serviços</a>
+        <a href="#cursos">Cursos</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#agenda">Agenda</a>
+        <a href="#docentes">Docentes</a>
+        <a href="#inclusao">Inclusão Digital</a>
+        <a href="#seguranca">Segurança</a>
+        <a href="#contato">Contato</a>
+      </nav>
+
+
+      <div class="header-actions">
+        <button id="darkModeBtn" class="dark-mode-btn" aria-label="Alternar tema">
+          <span class="dark-mode-thumb"></span>
+        </button>
+        <button class="btn btn-cta" onclick="scrollToSection('vestibular')">Inscreva-se</button>
+        <button id="burgerBtn" class="burger-btn" aria-label="Abrir menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <div id="introScreen" class="intro-screen">
+    <div class="intro-content">
+      <h1>Bem-vindo ao Centro Tecnológico | UNEDUVALE</h1>
+      <p id="typingText"></p>
+      <button class="btn btn-primary" onclick="hideIntro()">Entrar</button>
+    </div>
+  </div>
+
+  <div class="app-container">
+    <aside class="sidebar closed" id="sidebar">
+      <nav class="sidebar-nav">
+        <a href="#sobre" class="sidebar-link">Institucional</a>
+        <a href="#solucoes" class="sidebar-link">Serviços</a>
+        <a href="#cursos" class="sidebar-link">Cursos</a>
+        <a href="#projetos" class="sidebar-link">Projetos</a>
+        <a href="#agenda" class="sidebar-link">Agenda</a>
+        <a href="#docentes" class="sidebar-link">Docentes</a>
+        <a href="#inclusao" class="sidebar-link">Inclusão Digital</a>
+        <a href="#seguranca" class="sidebar-link">Segurança</a>
+        <a href="#contato" class="sidebar-link">Contato</a>
+      </nav>
+    </aside>
+    <div id="sidebarOverlay" class="sidebar-overlay"></div>
+
+    <main class="main-content">
+
+    <!-- =====================================
+         HOME / BANNER PRINCIPAL
+         ===================================== -->
+    <section id="hero" class="section hero-section">
+      <div class="container hero-content">
+        <div class="hero-logo">
+          <img
+            src="../assets/Logo-Centro-Tecnológico-Eduvale-site-300x104.png"
+            alt="Logo Centro Tecnológico UNEDUVALE"
+            class="hero-logo-img"
+            loading="eager"
+            decoding="async"
+          />
+        </div>
+<h1>Centro Tecnológico UNEDUVALE</h1>
+        <p class="hero-subtitle">Focado em <span id="heroHighlight" class="gradient-text-animated">Inovação</span> em Análise e Desenvolvimento de Sistemas, com prática e empregabilidade.</p>
+        <div class="hero-badges">
+          <div class="badge-item">+2.000 alunos</div>
+          <div class="badge-item">4 anos de tradição</div>
+          <div class="badge-item">100% projetos reais</div>
+        </div>
+        <div class="hero-cta-group">
+          <button class="btn btn-primary lava-btn magnetic-btn" onclick="scrollToSection('cursos')">Conheça os cursos</button>
+          <button class="btn btn-secondary magnetic-btn" onclick="scrollToSection('vestibular')">Vestibular 2026</button>
+        </div>
+        <div class="scroll-indicator">
+          <span>Role para explorar</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+        </div>
+      </div>
+    </section>
+
+    <section id="solucoes" class="section solutions-section">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-label">O que você constrói</span>
+          <h2>O que você constrói em Análise e Desenvolvimento de Sistemas</h2>
+          <p class="subtitle">Habilidades e projetos que transformam ideias em produtos reais e empurram sua carreira para frente.</p>
+        </div>
+        <div class="solution-grid">
+          <article class="solution-card neon-card hover-lift">
+            <h3>Sistemas que funcionam de verdade</h3>
+            <p>Você cria aplicações completas, do design ao código, prontas para uso e validadas pelo mercado.</p>
+          </article>
+          <article class="solution-card neon-card hover-lift">
+            <h3>Portfólio com projetos reais</h3>
+            <p>Trabalhos práticos garantem um portfólio forte e visível para mostrar em entrevistas e processos seletivos.</p>
+          </article>
+          <article class="solution-card neon-card hover-lift">
+            <h3>Aprendizado prático desde o primeiro dia</h3>
+            <p>Aprende com laboratórios, desafios e integrações reais, sem ficar preso só à teoria.</p>
+          </article>
+          <article class="solution-card neon-card hover-lift">
+            <h3>Conexão com empresas e estágio</h3>
+            <p>O curso aproxima você de empresas, vagas e oportunidades reais de estágio e desenvolvimento profissional.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================
+         INSTITUCIONAL (MISSÃO / VISÃO / VALORES)
+         ===================================== -->
+    <section id="sobre" class="section glass-card">
+      <div class="container">
+        <h2>Sobre o Centro Tecnológico e UNEDUVALE</h2>
+        <p>O Centro Tecnológico surgiu em 2024 como polo de inovação do Centro Universitário UNEDUVALE. UNEDUVALE tem história desde 2010 e nasceu com o propósito de levar ensino superior de qualidade para a Região de Avaré-SP.</p>
+        <div class="info-grid">
+          <article>
+            <h3>Missão</h3>
+            <p>Formar profissionais críticos com foco em prática, inovação e impacto social.</p>
+          </article>
+          <article>
+            <h3>Visão</h3>
+            <p>Ser referência em formação tecnológica aplicada, conectando ensino, projetos reais e oportunidades.</p>
+          </article>
+          <article>
+            <h3>Valores</h3>
+            <p>Aprendizagem contínua, ética, colaboração, qualidade técnica e compromisso com a comunidade.</p>
+          </article>
+          <article>
+            <h3>Centro Tecnológico (CTE)</h3>
+            <p>
+              Inaugurado em janeiro de 2026, o Centro Tecnológico Eduvale (CTE) é destinado aos alunos do curso de Análise e Desenvolvimento de Sistemas
+              e tem como objetivo oferecer uma estrutura moderna e adequada ao ensino na área de tecnologia da informação.
+            </p>
+            <p>
+              O CTE dispõe de três salas de aula e sala dos professores em um ambiente amplo, moderno e equipado com Wi‑Fi otimizado,
+              proporcionando conforto, conectividade e suporte tecnológico aos alunos e docentes.
+            </p>
+            <p>
+              Com fácil acesso, o CTE está localizado no centro de Avaré, no segundo andar do HVET. Endereço: Rua Goiás, 1121.
+            </p>
+          </article>
+        </div>
+
+        <div class="info-grid" style="margin-top: 1.5rem;">
+          <article>
+            <h3>Histórico</h3>
+            <p>UNEDUVALE tem história desde 2010 e o Centro Tecnológico foi criado em 2024 como polo de inovação e formação em tecnologia.</p>
+          </article>
+          <article>
+            <h3>Instagram</h3>
+            <p><a href="https://www.instagram.com/uneduvale" target="_blank" rel="noreferrer">@uneduvale</a> (Fonte oficial de notícias, eventos e vestibular).</p>
+          </article>
+          <article>
+            <h3>Atuação</h3>
+            <p>Projetos, laboratórios e atividades que favorecem a prática, a empregabilidade e o desenvolvimento profissional do aluno.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="cursos" class="section">
+      <div class="container">
+        <h2>O Curso do Centro Tecnológico</h2>
+        <p class="subtitle">Formação completa em Análise e Desenvolvimento de Sistemas, com laboratórios, estágios e projetos reais.</p>
+
+        <div class="course-slider" id="courseSlider">
+          <div class="slider-track" id="sliderTrack">
+            <article class="slide-item">
+              <div class="slide-item-content">
+                <span class="slide-tag">Tecnologia</span>
+                <h3>Análise e Desenvolvimento de Sistemas</h3>
+                <p class="slide-duration">3 anos · 6 períodos · 1.800 horas</p>
+                <p class="slide-desc">Formação completa em desenvolvimento full-stack, computação em nuvem, ciência de dados e DevOps. Preparação real para o mercado de trabalho.</p>
+                <div class="slide-highlights">
+                  <span class="highlight-pill">🎯 Estágio garantido</span>
+                  <span class="highlight-pill">🖥️ Laboratórios modernos</span>
+                  <span class="highlight-pill">🏆 Hackathons</span>
+                  <span class="highlight-pill">🤝 Parcerias com empresas</span>
+                </div>
+              </div>
+            </article>
+          </div>
+          <button class="slider-btn prev" aria-label="Slide anterior">❮</button>
+          <button class="slider-btn next" aria-label="Próximo slide">❯</button>
+          <div class="slider-dots" id="sliderDots"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="segmentos" class="section glass-card">
+
+    <!-- =====================================
+         SERVIÇOS + CURSOS (MANTÉM)
+         ===================================== -->
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-label">Por tipo de projeto</span>
+          <h2>Aplicações de ADS para diferentes objetivos</h2>
+          <p class="subtitle">Escolha a abordagem certa para sua ideia ou negócio.</p>
+        </div>
+        <div class="feature-tabs">
+          <div class="feature-buttons">
+            <button class="tab active" data-feature="startup">Startup</button>
+            <button class="tab" data-feature="empresa">Empresa</button>
+            <button class="tab" data-feature="portfolio">Portfólio</button>
+          </div>
+          <div class="feature-panels">
+            <div class="feature-panel active" id="startup">
+              <h3>Startup</h3>
+              <p>Estruturamos MVPs e protótipos com tempo de entrega rápido, foco em validação e escalabilidade futura.</p>
+            </div>
+            <div class="feature-panel" id="empresa">
+              <h3>Empresa</h3>
+              <p>Desenvolvemos sistemas corporativos, integrações com ERP e soluções que simplificam processos internos.</p>
+            </div>
+            <div class="feature-panel" id="portfolio">
+              <h3>Portfólio</h3>
+              <p>Criamos landing pages, portais pessoais e sites profissionais que valorizam imagem e resultados.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section id="grade" class="section grade-section">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-label">Grade Curricular</span>
+          <h2>Análise e Desenvolvimento de Sistemas</h2>
+          <p class="subtitle">6 períodos · 3 anos · 1.800 horas de formação intensiva e prática</p>
+        </div>
+
+        <div class="grade-timeline">
+          <div class="timeline-line" aria-hidden="true"></div>
+
+          <article class="grade-period">
+            <div class="period-marker" aria-hidden="true">
+              <span class="period-number">1</span>
+              <span class="period-semester">SEM</span>
+            </div>
+            <div class="period-content glass-card neon-card hover-lift">
+              <div class="period-header">
+                <h3>1º Período — Fundamentos</h3>
+                <span class="period-hours">300h</span>
+              </div>
+              <p class="period-desc">Base sólida em lógica, algoritmos e pensamento computacional.</p>
+              <ul class="subject-list">
+                <li>Banco de Dados <em>60h</em></li>
+                <li>Aplicações Web I <em>80h</em></li>
+                <li>Introdução a Sistemas de Informação <em>60h</em></li>
+                <li>Matemática Aplicada <em>60h</em></li>
+                <li>Arquitetura e Organização de Computadores <em>60h</em></li>
+              </ul>
+              <div class="period-skills">
+                <span class="skill-pill">🐍 Python</span>
+                <span class="skill-pill">📊 MySQL</span>
+                <span class="skill-pill">🧮 Lógica</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="grade-period">
+            <div class="period-marker" aria-hidden="true">
+              <span class="period-number">2</span>
+              <span class="period-semester">SEM</span>
+            </div>
+            <div class="period-content glass-card neon-card hover-lift">
+              <div class="period-header">
+                <h3>2º Período — Estruturas</h3>
+                <span class="period-hours">300h</span>
+              </div>
+              <p class="period-desc">Aprofundamento em POO, estruturas de dados e redes de computadores.</p>
+              <ul class="subject-list">
+                <li>Programação Orientada a Objetos <em>80h</em></li>
+                <li>Aplicações Web II <em>80h</em></li>
+                <li>Engenharia de Software <em>60h</em></li>
+                <li>Estrutura de Dados <em>60h</em></li>
+                <li>Sistemas Operacionais <em>60h</em></li>
+              </ul>
+              <div class="period-skills">
+                <span class="skill-pill">☕ Java</span>
+                <span class="skill-pill">🗄️ MongoDB</span>
+                <span class="skill-pill">🌐 TCP/IP</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="grade-period">
+            <div class="period-marker" aria-hidden="true">
+              <span class="period-number">3</span>
+              <span class="period-semester">SEM</span>
+            </div>
+            <div class="period-content glass-card neon-card hover-lift">
+              <div class="period-header">
+                <h3>3º Período — Web & Software</h3>
+                <span class="period-hours">300h</span>
+              </div>
+              <p class="period-desc">Desenvolvimento web, engenharia de software e primeiras arquiteturas.</p>
+              <ul class="subject-list">
+                <li>Desenvolvimento Frontend <em>80h</em></li>
+                <li>Desenvolvimento Backend <em>80h</em></li>
+                <li>Redes de Computadores <em>60h</em></li>
+                <li>Modelagem de Sistemas <em>60h</em></li>
+                <li>Banco de Dados Avançado <em>60h</em></li>
+              </ul>
+              <div class="period-skills">
+                <span class="skill-pill">⚛️ React</span>
+                <span class="skill-pill">🐳 Docker</span>
+                <span class="skill-pill">📋 Scrum</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="grade-period">
+            <div class="period-marker" aria-hidden="true">
+              <span class="period-number">4</span>
+              <span class="period-semester">SEM</span>
+            </div>
+            <div class="period-content glass-card neon-card hover-lift">
+              <div class="period-header">
+                <h3>4º Período — Full-Stack</h3>
+                <span class="period-hours">300h</span>
+              </div>
+              <p class="period-desc">Construção de aplicações completas com front-end, back-end e mobile.</p>
+              <ul class="subject-list">
+                <li>Desenvolvimento Mobile <em>80h</em></li>
+                <li>Segurança da Informação <em>60h</em></li>
+                <li>Frameworks Web <em>60h</em></li>
+                <li>Qualidade e Testes de Software <em>60h</em></li>
+                <li>Metodologias Ágeis <em>60h</em></li>
+              </ul>
+              <div class="period-skills">
+                <span class="skill-pill">🟢 Node.js</span>
+                <span class="skill-pill">📱 Mobile</span>
+                <span class="skill-pill">🔒 OWASP</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="grade-period">
+            <div class="period-marker" aria-hidden="true">
+              <span class="period-number">5</span>
+              <span class="period-semester">SEM</span>
+            </div>
+            <div class="period-content glass-card neon-card hover-lift">
+              <div class="period-header">
+                <h3>5º Período — Cloud & Dados</h3>
+                <span class="period-hours">300h</span>
+              </div>
+              <p class="period-desc">Computação em nuvem, ciência de dados e arquiteturas escaláveis.</p>
+              <ul class="subject-list">
+                <li>Cloud Computing <em>80h</em></li>
+                <li>Inteligência Artificial <em>60h</em></li>
+                <li>Internet das Coisas (IoT) <em>60h</em></li>
+                <li>Gestão de Projetos de TI <em>60h</em></li>
+                <li>Projeto Integrador I <em>60h</em></li>
+              </ul>
+              <div class="period-skills">
+                <span class="skill-pill">☁️ AWS</span>
+                <span class="skill-pill">📈 Pandas</span>
+                <span class="skill-pill">🚀 Kubernetes</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="grade-period">
+            <div class="period-marker" aria-hidden="true">
+              <span class="period-number">6</span>
+              <span class="period-semester">SEM</span>
+            </div>
+            <div class="period-content glass-card neon-card hover-lift">
+              <div class="period-header">
+                <h3>6º Período — Mercado & TCC</h3>
+                <span class="period-hours">300h</span>
+              </div>
+              <p class="period-desc">Gestão de projetos, empreendedorismo e trabalho de conclusão de curso.</p>
+              <ul class="subject-list">
+                <li>Governança de TI <em>60h</em></li>
+                <li>Empreendedorismo e Inovação <em>60h</em></li>
+                <li>Análise de Dados / Big Data <em>60h</em></li>
+                <li>Projeto Integrador II ou TCC <em>80h</em></li>
+                <li>Estágio Supervisionado <em>40h</em></li>
+              </ul>
+              <div class="period-skills">
+                <span class="skill-pill">🤖 IA</span>
+                <span class="skill-pill">📊 Gestão</span>
+                <span class="skill-pill">🎓 TCC</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="grade-legend glass-card">
+          <h4>Legenda das Disciplinas</h4>
+          <div class="legend-items">
+            <span><span class="legend-dot teoria"></span> Teoria</span>
+            <span><span class="legend-dot pratica"></span> Prática</span>
+            <span><span class="legend-dot projeto"></span> Projeto / TCC</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="noticias" class="section">
+      <div class="container">
+        <h2>O que dizem nossos alunos</h2>
+        <p class="subtitle">Conheça as experiências e sucesso de quem está aqui.</p>
+        <div class="testimonials-grid">
+          <article class="testimonial-card glass-card">
+            <div class="testimonial-header">
+              <div class="testimonial-avatar" style="background: linear-gradient(135deg, #2657a4, #ffd900);">RC</div>
+              <div>
+                <h4>Rafa Cardoso</h4>
+                <p class="testimonial-role">Aluno ADS - 3º período</p>
+              </div>
+            </div>
+            <p class="testimonial-text">"A UNEDUVALE me proporcionou uma formação prática e moderna. Os projetos reais e as parcerias com empresas são incríveis!"</p>
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+          </article>
+          <article class="testimonial-card glass-card">
+            <div class="testimonial-header">
+              <div class="testimonial-avatar" style="background: linear-gradient(135deg, #1556a6, #a5c7ff);">MV</div>
+              <div>
+                <h4>Marina Volpato</h4>
+                <p class="testimonial-role">Aluna ADS - 2º período</p>
+              </div>
+            </div>
+            <p class="testimonial-text">"Os laboratórios e projetos de software me deram confiança para o mercado. É uma formação muito prática e atual."</p>
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+          </article>
+          <article class="testimonial-card glass-card">
+            <div class="testimonial-header">
+              <div class="testimonial-avatar" style="background: linear-gradient(135deg, #0f243f, #2657a4);">TL</div>
+              <div>
+                <h4>Thiago Lima</h4>
+                <p class="testimonial-role">Egresso ADS - Trabalhando em startup</p>
+              </div>
+            </div>
+            <p class="testimonial-text">"Saí formado, empregado e com portfólio pronto. A UNEDUVALE não é só faculdade, é trampolim para o sucesso!"</p>
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================
+         PROJETOS / AGENDA / DOCENTES / INCLUSÃO / SEGURANÇA
+         ===================================== -->
+
+    <section id="projetos" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-label">Projetos</span>
+          <h2>Projetos realizados com foco em entrega</h2>
+
+        </div>
+
+        <div class="solution-grid">
+          <article class="solution-card neon-card hover-lift">
+            <h3>Plataforma de Monitoramento Inteligente</h3>
+            <p>Aplicação com dashboards, regras de negócio e integração com dados para apoiar decisões operacionais.</p>
+            <div style="margin-top:1rem; display:flex; gap:.75rem; flex-wrap:wrap;">
+              <a class="btn btn-secondary" href="#" onclick="showToast('Detalhes do projeto (exemplo)'); return false;">Ver detalhes</a>
+            </div>
+          </article>
+
+          <article class="solution-card neon-card hover-lift">
+            <h3>UX + Portal de Instituição</h3>
+            <p>Portfólio institucional com navegação e conteúdo organizado para melhorar acesso e legibilidade no mobile.</p>
+            <div style="margin-top:1rem; display:flex; gap:.75rem; flex-wrap:wrap;">
+              <a class="btn btn-secondary" href="#" onclick="showToast('Detalhes do projeto (exemplo)'); return false;">Ver detalhes</a>
+            </div>
+          </article>
+
+          <article class="solution-card neon-card hover-lift">
+            <h3>App de Aprendizagem por Projetos</h3>
+            <p>Proposta de trilhas e acompanhamento de atividades para facilitar colaboração e entrega em equipe.</p>
+            <div style="margin-top:1rem; display:flex; gap:.75rem; flex-wrap:wrap;">
+              <a class="btn btn-secondary" href="#" onclick="showToast('Detalhes do projeto (exemplo)'); return false;">Ver detalhes</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="agenda" class="section glass-card">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-label">Agenda</span>
+          <h2>Eventos futuros</h2>
+          <p class="subtitle">Data, horário e local em formato simples.</p>
+        </div>
+
+        <div class="info-grid" style="margin-top:2rem;">
+          <article>
+            <h3>Tech Day UNEDUVALE</h3>
+            <p><strong>Data:</strong> 12/06/2026</p>
+            <p><strong>Horário:</strong> 19:00</p>
+            <p><strong>Local:</strong> Auditório Centro Tecnológico</p>
+          </article>
+          <article>
+            <h3>Workshop de Projetos Reais</h3>
+            <p><strong>Data:</strong> 25/06/2026</p>
+            <p><strong>Horário:</strong> 18:30</p>
+            <p><strong>Local:</strong> Laboratório de Desenvolvimento</p>
+          </article>
+          <article>
+            <h3>Feira de Estágio</h3>
+            <p><strong>Data:</strong> 10/07/2026</p>
+            <p><strong>Horário:</strong> 09:00</p>
+            <p><strong>Local:</strong> Pátio do Campus</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="docentes" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-label">Docentes</span>
+          <h2>Professores e orientadores</h2>
+          <p class="subtitle">Nome, área e mini currículo (layout em cards).</p>
+        </div>
+
+        <div class="testimonials-grid" style="margin-top:2rem;">
+          <article class="testimonial-card glass-card">
+            <div class="testimonial-header">
+              <div class="testimonial-avatar" style="background: linear-gradient(135deg, #2657a4, #ffd900);">DR</div>
+              <div>
+                <h4>Daniel Reis</h4>
+                <p class="testimonial-role">Engenharia de Software</p>
+              </div>
+            </div>
+            <p class="testimonial-text">Formação em sistemas, foco em arquiteturas e qualidade, orienta projetos com práticas ágeis.</p>
+          </article>
+
+          <article class="testimonial-card glass-card">
+            <div class="testimonial-header">
+              <div class="testimonial-avatar" style="background: linear-gradient(135deg, #1556a6, #a5c7ff);">AL</div>
+              <div>
+                <h4>André Lima</h4>
+                <p class="testimonial-role">Banco de Dados</p>
+              </div>
+            </div>
+            <p class="testimonial-text">Trabalha com modelagem, otimização e boas práticas para aplicações com dados.</p>
+          </article>
+
+          <article class="testimonial-card glass-card">
+            <div class="testimonial-header">
+              <div class="testimonial-avatar" style="background: linear-gradient(135deg, #0f243f, #2657a4);">MA</div>
+              <div>
+                <h4>Mariana Alves</h4>
+                <p class="testimonial-role">Segurança da Informação</p>
+              </div>
+            </div>
+            <p class="testimonial-text">Ensina segurança aplicada, privacidade, boas práticas e prevenção a vulnerabilidades.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="inclusao" class="section glass-card">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-label">Inclusão Digital</span>
+          <h2>Ações para ampliar oportunidades</h2>
+          <p class="subtitle">Projetos sociais e parcerias com foco em acesso.</p>
+        </div>
+
+        <div class="solution-grid" style="margin-top:2rem;">
+          <article class="solution-card neon-card hover-lift">
+            <h3>Curso Aberto de Tecnologia</h3>
+            <p>Aulas introdutórias e oficinas para iniciantes, com apoio de monitores e materiais didáticos.</p>
+          </article>
+          <article class="solution-card neon-card hover-lift">
+            <h3>Programa Comunidade + Projetos</h3>
+            <p>Mentorias e orientação de projetos com foco em resolver problemas reais da comunidade.</p>
+          </article>
+          <article class="solution-card neon-card hover-lift">
+            <h3>Parcerias com Instituições Locais</h3>
+            <p>Atividades conjuntas para fortalecer o acesso a tecnologia e incentivar a formação contínua.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="seguranca" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-label">Segurança</span>
+          <h2>Boas práticas e LGPD (conceitual)</h2>
+          <p class="subtitle">Políticas de privacidade e orientações de segurança para o usuário.</p>
+        </div>
+
+        <div class="info-grid" style="margin-top:2rem;">
+          <article>
+            <h3>Privacidade e dados</h3>
+            <p>Este site utiliza coleta apenas conceitual para demonstração. O formulário envia mensagem via front-end (sem backend real), mantendo foco educacional.</p>
+          </article>
+          <article>
+            <h3>Boas práticas</h3>
+            <p>Recomendamos uso de senhas fortes, cuidado com links suspeitos, atenção a golpes e atualização de sistemas e navegadores.</p>
+          </article>
+          <article>
+            <h3>Conformidade (LGPD)</h3>
+            <p>Princípios de transparência, finalidade e minimização de dados: coletar apenas o necessário e explicar o objetivo de uso.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="section glass-card">
+      <div class="container">
+        <h2>Perguntas frequentes</h2>
+        <div class="faq-accordion">
+          <article class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Como funciona o curso de Análise e Desenvolvimento de Sistemas?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>O curso de Análise e Desenvolvimento de Sistemas (ADS) da UNEDUVALE é estruturado em 6 períodos, totalizando 3 anos de formação intensiva e 1.800 horas de carga horária. A metodologia combina fundamentos teóricos sólidos com uma forte ênfase na prática profissional, preparando o aluno para atuar em todas as etapas do ciclo de vida de um software — desde a concepção e análise de requisitos até o deploy, manutenção e escalabilidade de aplicações.</p>
+              <p>Desde o primeiro período, os alunos entram em contato com linguagens de programação, lógica computacional e estruturas de dados. Ao longo dos semestres, a grade evolui para áreas mais especializadas como desenvolvimento web full-stack, arquitetura de software, bancos de dados relacionais e não-relacionais, computação em nuvem, DevOps, ciência de dados e segurança da informação. Cada disciplina é pensada para refletir as demandas reais do mercado de tecnologia.</p>
+              <p>O diferencial do curso está na abordagem por projetos: os alunos trabalham em equipes multidisciplinares, simulando ambientes reais de desenvolvimento ágil (Scrum/Kanban), utilizando ferramentas profissionais como Git, Docker, AWS, Firebase e frameworks modernos (React, Node.js, Flutter). Além disso, o curso promove hackathons internos, desafios de inovação e parcerias com empresas da região, garantindo que o aluno saia com um portfólio robusto e experiência comprovada.</p>
+            </div>
+          </article>
+          <article class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Quais tecnologias e ferramentas são ensinadas no curso?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>A grade curricular do ADS da UNEDUVALE é constantemente atualizada para acompanhar as tendências do mercado de tecnologia. Os alunos têm contato direto com um stack tecnológico moderno e relevante, dividido em front-end, back-end, mobile, dados e infraestrutura.</p>
+              <p>No <strong>front-end</strong>, trabalhamos com HTML5 semântico, CSS3 com Flexbox e Grid, JavaScript ES6+, TypeScript, React.js com hooks e context API, gerenciamento de estado com Redux/Zustand, e frameworks CSS como Tailwind. No <strong>back-end</strong>, a formação abrange Node.js com Express, Python com Django/FastAPI, Java com Spring Boot, APIs RESTful e GraphQL, autenticação JWT e OAuth, e testes automatizados com Jest e Cypress.</p>
+              <p>Em <strong>banco de dados</strong>, os alunos aprendem PostgreSQL, MySQL, MongoDB e Redis, modelagem relacional e não-relacional, otimização de queries e normalização. Em <strong>mobile</strong>, o foco está em React Native e Flutter para desenvolvimento cross-platform. Para <strong>DevOps e cloud</strong>, ensinamos Docker, Kubernetes, CI/CD com GitHub Actions, AWS (EC2, S3, Lambda, RDS) e Google Cloud Platform.</p>
+              <p>Também há módulos de <strong>ciência de dados</strong> com Python, Pandas, NumPy, visualização com Matplotlib/Plotly, e introdução a machine learning com scikit-learn. Todas as ferramentas são ensinadas em laboratórios equipados e projetos práticos que simulam cenários reais de mercado.</p>
+            </div>
+          </article>
+          <article class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Como funciona o estágio e as parcerias com empresas?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>A UNEDUVALE mantém uma forte rede de parcerias com empresas de tecnologia da região de Avaré-SP e do estado de São Paulo, criando um canal direto entre os alunos e oportunidades reais de estágio, trainee e contratação. O estágio é incentivado desde o 3º período, quando o aluno já possui base técnica suficiente para contribuir em projetos reais.</p>
+              <p>O programa de estágio é estruturado em três pilares: <strong>1) Conexão</strong> — feiras de carreira, palestras com profissionais do mercado e networking com empresas parceiras; <strong>2) Preparação</strong> — workshops de entrevistas técnicas, elaboração de currículo para área de TI, simulações de code review e práticas de pair programming; <strong>3) Acompanhamento</strong> — orientação pedagógica durante o estágio, avaliação de desempenho e feedback contínuo para garantir a melhor experiência de aprendizado.</p>
+              <p>As empresas parceiras participam ativamente da formação, proporcioando desafios reais para os alunos resolverem em sala de aula, patrocinando hackathons e oferecendo bolsas de estudo para projetos de inovação. Muitos alunos são contratados pelas próprias empresas onde estagiaram, com taxa de empregabilidade de 92% no primeiro ano após a formatura.</p>
+            </div>
+          </article>
+          <article class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Qual a diferença entre ADS e Ciência da Computação?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Análise e Desenvolvimento de Sistemas (ADS) e Ciência da Computação (CC) são formações complementares, mas com focos distintos que atendem a diferentes perfis profissionais e objetivos de carreira. O ADS é um curso tecnólogo de 3 anos com ênfase prática e imersão direta no mercado de trabalho, enquanto a Ciência da Computação é uma graduação bacharelado de 4 anos com abordagem mais teórica e acadêmica.</p>
+              <p>O ADS da UNEDUVALE é ideal para quem quer <strong>entrar rápido no mercado</strong> e começar a trabalhar com desenvolvimento de software, análise de sistemas, gestão de projetos de TI e consultoria tecnológica. A grade é 100% voltada para a prática: os alunos codificam desde o primeiro semestre, trabalham em projetos reais e saem com um portfólio profissional. É a escolha perfeita para quem busca empregabilidade imediata e quer se tornar um desenvolvedor full-stack, analista de sistemas ou Product Owner.</p>
+              <p>Já a Ciência da Computação aprofunda mais em fundamentos matemáticos, teoria da computação, algoritmos avançados, inteligência artificial, pesquisa científica e arquitetura de computadores. É indicada para quem pretende seguir carreira acadêmica, pesquisa, ou atuar em áreas altamente especializadas como IA, criptografia, computação quântica ou sistemas distribuídos de grande escala.</p>
+              <p>Na UNEDUVALE, o ADS também oferece disciplinas avançadas como introdução a machine learning, cloud computing e arquitetura de microserviços, permitindo que o aluno tenha uma formação robusta sem abrir mão da agilidade e da conexão com o mercado.</p>
+            </div>
+          </article>
+          <article class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>O curso oferece certificações ou preparação para o mercado?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Sim, além do diploma oficial de tecnólogo em Análise e Desenvolvimento de Sistemas, a UNEDUVALE oferece uma série de certificações complementares e programas de preparação para o mercado que aumentam significativamente a empregabilidade dos alunos.</p>
+              <p>Durante o curso, os alunos têm acesso a <strong>trilhas de certificação</strong> em parceria com empresas de tecnologia, incluindo preparação para exames como AWS Cloud Practitioner, Microsoft Azure Fundamentals, Scrum Foundation, e certificações de linguagens específicas. O custo dessas certificações é subsidiado ou integralmente coberto pela faculdade para alunos com bom desempenho acadêmico.</p>
+              <p>A preparação para o mercado inclui: workshops de LinkedIn e branding pessoal para desenvolvedores, simulações de entrevistas técnicas em inglês e português, mentorias individuais com profissionais seniores de empresas parceiras, e um programa de <strong>"Job Ready"</strong> que revisa o portfólio GitHub, currículo e perfil do aluno antes da primeira entrevista real.</p>
+              <p>Também promovemos eventos exclusivos como o <strong>"Tech Day UNEDUVALE"</strong>, onde empresas recrutadoras fazem palestras, dinâmicas de grupo e entrevistas em tempo real, com oportunidades de contratação imediata para os melhores alunos.</p>
+            </div>
+          </article>
+          <article class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Quais são as formas de ingresso e qual a estrutura de bolsas?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>A UNEDUVALE oferece múltiplas modalidades de ingresso para o curso de ADS, garantindo acessibilidade e flexibilidade para diferentes perfis de candidatos. As principais formas de entrada são: <strong>Vestibular tradicional</strong> — prova presencial com questões de conhecimentos gerais, raciocínio lógico e redação, realizada semestralmente; <strong>Nota do ENEM</strong> — candidatos podem usar a pontuação do Exame Nacional do Ensino Médio dos últimos 3 anos para concorrer a vagas, sem necessidade de fazer prova adicional; <strong>Prova agendada</strong> — o candidato marca seu próprio dia e horário para realizar a avaliação no campus; e <strong>Transferência externa</strong> — alunos de outras instituições podem solicitar aproveitamento de estudos e migrar para o ADS da UNEDUVALE.</p>
+              <p>A estrutura de bolsas é ampla e inclusiva. Oferecemos <strong>bolsas de mérito</strong> de até 100% para alunos com excelente desempenho no vestibular ou ENEM; <strong>bolsas de continuidade</strong> que recompensam o bom aproveitamento acadêmico ao longo dos períodos; e <strong>bolsas de parceria</strong> para filhos de colaboradores de empresas conveniadas, estudantes de escolas públicas e candidatos de comunidades vulneráveis.</p>
+              <p>Além disso, a faculdade disponibiliza o <strong>"Fundo de Inovação UNEDUVALE"</strong>, um programa de financiamento estudantil com condições especiais, taxas de juros reduzidas e carência de até 6 meses após a formatura para início do pagamento. As inscrições para o vestibular 2026 estão abertas e o processo seletivo inclui análise de currículo acadêmico, entrevista de motivação e, para bolsas de mérito, uma prova de raciocínio lógico aplicada.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section stats-section">
+      <div class="container">
+        <h2>Números que falam</h2>
+        <div class="stats-grid">
+          <div class="stat-card glass-card">
+            <h3 class="stat-number" data-target="2000">1000</h3>
+            <p>Alunos ativos</p>
+          </div>
+          <div class="stat-card glass-card">
+            <h3 class="stat-number" data-target="98">50</h3>
+            <p>% de empregabilidade</p>
+          </div>
+          <div class="stat-card glass-card">
+            <h3 class="stat-number" data-target="15">5</h3>
+            <p>Parcerias empresariais</p>
+          </div>
+          <div class="stat-card glass-card">
+            <h3 class="stat-number" data-target="4">2</h3>
+            <p>Anos de excelência</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="noticias-real" class="section">
+      <div class="container">
+        <h2>Notícias Recentes</h2>
+        <p class="subtitle">Conteúdo puxado dos canais oficiais UNEDUVALE.</p>
+        <div class="cards-grid">
+          <article class="news-card">
+            <h3>Projeto Longevidade 2026</h3>
+            <time>26/03/2026</time>
+            <p>Inclusão digital para quem tem 50+ anos is on, além de parcerias com cursos tech e bio.</p>
+          </article>
+          <article class="news-card">
+            <h3>ADS vence hackathon</h3>
+            <time>23/03/2026</time>
+            <p>Equipe ADS desenvolve solução com IA para monitoramento inteligente de processos e melhoria de UX.</p>
+          </article>
+          <article class="news-card">
+            <h3>ADS vence hackathon</h3>
+            <time>20/03/2026</time>
+            <p>Equipe uneduvale desenvolve solução com IA para monitoramento inteligente de fazendas.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="vestibular" class="section glass-card">
+      <div class="container">
+        <h2>Vestibular Achou Seu Futuro</h2>
+        <p class="subtitle">Inscrições abertas para 2026. Último dia: 25/04/2026. Prova presencial em 29/04/2026.</p>
+        <div class="info-grid-2">
+          <article>
+            <h3>Como participar</h3>
+            <p>Acesse <a href="https://vestibular.eduvaleavare.com.br" target="_blank" rel="noreferrer">vestibular.eduvaleavare.com.br</a>, preencha o formulário e faça o pagamento com isenção parcial para 1ª fase.</p>
+          </article>
+          <article>
+            <h3>Modalidades</h3>
+            <p>Entrada por nota de ENEM, prova agendada e transferência externa para o curso de ADS.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section id="diferenciais" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-label">Diferenciais ADS</span>
+          <h2>Por que escolher Análise e Desenvolvimento de Sistemas</h2>
+          <p class="subtitle">Uma formação pensada para quem quer aprender com prática real, tecnologia atual e forte ligação com o mercado.</p>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature-card glass-card neon-card hover-lift">
+            <h3>Projetos reais</h3>
+            <p>Desenvolvemos sistemas e aplicações para clientes reais, aproximando você das demandas do mercado desde o início.</p>
+          </article>
+          <article class="feature-card glass-card neon-card hover-lift">
+            <h3>Estágios e parcerias</h3>
+            <p>Conexão com empresas locais e regionais garante oportunidades de estágio e vivência profissional durante o curso.</p>
+          </article>
+          <article class="feature-card glass-card neon-card hover-lift">
+            <h3>Laboratórios modernos</h3>
+            <p>Ambientes de prática com infraestrutura para web, mobile, bancos de dados, redes e integração com nuvem.</p>
+          </article>
+          <article class="feature-card glass-card neon-card hover-lift">
+            <h3>Professores de mercado</h3>
+            <p>Corpo docente com experiência em empresas e projetos reais, garantindo orientação técnica e aplicabilidade.</p>
+          </article>
+        </div>
+
+        <div class="impact-grid">
+          <article class="impact-card glass-card neon-card hover-lift">
+            <div class="impact-icon icon-shake">🚀</div>
+            <strong class="impact-number stat-number number-glow pulse-glow" data-target="128">0</strong>
+            <p>Projetos entregues com sistema funcional, design profissional e valor real.</p>
+          </article>
+          <article class="impact-card glass-card neon-card hover-lift">
+            <div class="impact-icon icon-shake">🤝</div>
+            <strong class="impact-number stat-number number-glow pulse-glow" data-target="42">0</strong>
+            <p>Empresas parceiras e oportunidades para estágio, mentoria e contratações.</p>
+          </article>
+          <article class="impact-card glass-card neon-card hover-lift">
+            <div class="impact-icon icon-shake">📈</div>
+            <strong class="impact-number stat-number number-glow pulse-glow" data-target="94">0</strong>
+            <p>Taxa de empregabilidade e encaminhamento em tecnologia após a conclusão.</p>
+          </article>
+        </div>
+
+        <div class="timeline-grid">
+          <article class="timeline-step glass-card neon-card hover-lift">
+            <div class="step-label">01</div>
+            <h3>Ingresso</h3>
+            <p>Comece com fundamentos sólidos e um plano de estudos claro para cada período.</p>
+          </article>
+          <article class="timeline-step glass-card neon-card hover-lift">
+            <div class="step-label">02</div>
+            <h3>Projetos</h3>
+            <p>Trabalhe em entregas práticas, com protótipos, integrações e uso de tecnologias atuais.</p>
+          </article>
+          <article class="timeline-step glass-card neon-card hover-lift">
+            <div class="step-label">03</div>
+            <h3>Estágio</h3>
+            <p>Desenvolva experiência no mercado com oportunidades de estágio e participação em equipes reais.</p>
+          </article>
+          <article class="timeline-step glass-card neon-card hover-lift">
+            <div class="step-label">04</div>
+            <h3>Carreira</h3>
+            <p>Prepare seu portfólio e entre no mercado com habilidades alinhadas às principais demandas de TI.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="dashboard" class="section dashboard-section hidden-panel">
+      <div class="container">
+        <div class="dashboard-card glass-card">
+          <div class="dashboard-header">
+            <div>
+              <span class="login-badge">Painel UNEDUVALE</span>
+              <h2 id="dashboardTitle">Bem-vindo ao portal</h2>
+              <p>Seu espaço de controle com últimas atividades, notícias e progresso.</p>
+            </div>
+            <button class="btn btn-secondary" onclick="scrollToSection('cursos')">Ver cursos</button>
+          </div>
+          <div class="dashboard-grid">
+            <div class="dashboard-summary">
+              <article class="summary-card">
+                <h3>Mensagens novas</h3>
+                <strong>5</strong>
+                <p>Responda avisos de matrícula e eventos.</p>
+              </article>
+              <article class="summary-card">
+                <h3>Próxima aula</h3>
+                <strong>ADS - Web I</strong>
+                <p>Terça-feira, 08:00</p>
+              </article>
+              <article class="summary-card">
+                <h3>Notas recentes</h3>
+                <strong>8.6</strong>
+                <p>Desempenho acima da média no último módulo.</p>
+              </article>
+            </div>
+            <div class="dashboard-actions">
+              <div class="status-card">
+                <h3>Agenda de hoje</h3>
+                <ul>
+                  <li>09:00 - Reunião com coordenação</li>
+                  <li>11:30 - Entrega de projeto ADS</li>
+                  <li>14:00 - Workshop de UX e arquitetura</li>
+                </ul>
+              </div>
+              <div class="cta-cards">
+                <button class="btn btn-primary">Abrir materiais</button>
+                <button class="btn btn-secondary">Ver calendário</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="crescimento" class="section graph-section">
+      <div class="container graph-grid">
+        <article class="graph-visual glass-card">
+          <div class="section-heading">
+            <span class="section-label">Números que inspiram</span>
+            <h2>Resultados em porcentagens</h2>
+            <p class="subtitle">Veja o impacto do ADS em empregabilidade, estágio e satisfação dos alunos.</p>
+          </div>
+          <div class="chart-container">
+            <canvas id="growthChart"></canvas>
+          </div>
+        </article>
+        <aside class="stats-panel">
+          <article class="result-card glass-card">
+            <strong class="percent-number" data-target="92">0</strong>
+            <p>Empregabilidade no primeiro ano</p>
+          </article>
+          <article class="result-card glass-card">
+            <strong class="percent-number" data-target="78">0</strong>
+            <p>Alunos com estágio ou projeto de empresa</p>
+          </article>
+          <article class="result-card glass-card">
+            <strong class="percent-number" data-target="96">0</strong>
+            <p>Satisfação dos alunos com aprendizagem prática</p>
+          </article>
+        </aside>
+      </div>
+    </section>
+
+    <section id="contato-final" class="section footer-contact-section">
+      <div class="container footer-contact-grid">
+        <article class="contact-summary glass-card">
+          <span class="section-label">Eduvale</span>
+          <h2>Conecte-se com a UNEDUVALE</h2>
+          <p class="subtitle">Atendimento diário das 08h às 22h. Entre em contato por e-mail, telefone ou redes sociais.</p>
+
+          <div class="contact-details">
+            <div class="contact-row">
+              <span class="detail-label">Email</span>
+              <a href="mailto:comercial@eduvaleavare.com.br">comercial@eduvaleavare.com.br</a>
+            </div>
+            <div class="contact-row">
+              <span class="detail-label">Telefone</span>
+              <a href="tel:+551437338585">(14) 3733-8585</a>
+            </div>
+            <div class="contact-row">
+              <span class="detail-label">Endereço</span>
+              Av. Pref. Misael Euphrásio Leal, 347, Avaré - SP
+            </div>
+            <div class="contact-row">
+              <span class="detail-label">Horário</span>
+              Segunda a domingo, 08h às 22h
+            </div>
+          </div>
+
+          <div class="social-links">
+            <a href="https://www.instagram.com/uneduvale" target="_blank" rel="noreferrer" class="social-card instagram" aria-label="Instagram UNEDUVALE">
+              <span class="social-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5A4.25 4.25 0 0 0 20.5 16.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5Z"/></svg>
+              </span>
+              <div>
+                <strong>Instagram</strong>
+                <small>@uneduvale</small>
+              </div>
+            </a>
+            <a href="https://www.facebook.com/uneduvale" target="_blank" rel="noreferrer" class="social-card facebook" aria-label="Facebook UNEDUVALE">
+              <span class="social-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M13.5 22V13.5h3.29l.49-3.77h-3.78V6.54c0-1.09.3-1.83 1.85-1.83h1.98V1.25A25.29 25.29 0 0 0 14.9 1c-2.92 0-4.92 1.78-4.92 5.05v2.83H6.46v3.77h3.52V22h3.52Z"/></svg>
+              </span>
+              <div>
+                <strong>Facebook</strong>
+                <small>/uneduvale</small>
+              </div>
+            </a>
+            <a href="https://www.youtube.com/@uneduvale" target="_blank" rel="noreferrer" class="social-card youtube" aria-label="YouTube UNEDUVALE">
+              <span class="social-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M21.8 7.03c-.18-.67-.7-1.19-1.37-1.37C18.82 5.25 12 5.25 12 5.25s-6.82 0-8.43.41c-.68.18-1.19.7-1.37 1.37C2 8.64 2 12 2 12s0 3.36.2 4.97c.18.67.7 1.19 1.37 1.37 1.61.41 8.43.41 8.43.41s6.82 0 8.43-.41c.68-.18 1.19-.7 1.37-1.37.2-1.61.2-4.97.2-4.97s0-3.36-.2-4.97Zm-12.2 8.15V8.82l6.03 3.18-6.03 3.18Z"/></svg>
+              </span>
+              <div>
+                <strong>YouTube</strong>
+                <small>/@uneduvale</small>
+              </div>
+            </a>
+            <a href="https://www.tiktok.com/@uneduvale" target="_blank" rel="noreferrer" class="social-card tiktok" aria-label="TikTok UNEDUVALE">
+              <span class="social-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16.37 2h2.39v2.4a4.59 4.59 0 0 1-4.59 4.59h-.5v-2.39a2.2 2.2 0 0 0 2.2-2.2V2Zm-3.49 2.65a5.87 5.87 0 0 0-1.43-.17 5.75 5.75 0 0 0-5.75 5.75 5.68 5.68 0 0 0 5.75 5.75h.78v-2.24h-.78a3.5 3.5 0 1 1 3.5-3.5v.17h2.24v-.17a5.74 5.74 0 0 1-5.75-5.75Z"/></svg>
+              </span>
+              <div>
+                <strong>TikTok</strong>
+                <small>@uneduvale</small>
+              </div>
+            </a>
+          </div>
+        </article>
+
+        <article class="map-card glass-card">
+          <h2>Localização</h2>
+          <div class="map-wrapper">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3705.3205196866746!2d-48.91726468473939!3d-23.078956484936748!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c8cd87ff1a2cd3%3A0x2f8b57d3a5f223d0!2sCentro%20Universit%C3%A1rio%20UNEDUVALE!5e0!3m2!1spt-BR!2sbr!4v1700000000000"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen=""
+              aria-label="Mapa de localização da UNEDUVALE"></iframe>
+          </div>
+          <p class="map-phrase">Venha conhecer o lugar onde tecnologia, paixão e futuro se encontram para transformar sua carreira.</p>
+        </article>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <section id="contato" class="section footer-contact-inline">
+        <div class="container contact-grid">
+          <div class="contact-card">
+            <h2>Contato</h2>
+            <p>Av. Pref. Misael Euphrásio Leal, 347, Avaré-SP</p>
+            <p>📞 (14) 3733-8585 | (14) 3733-8383 | WhatsApp (14) 99623-8383</p>
+            <p>✉️ comercial@eduvaleavare.com.br</p>
+            <p>Instagram: <a href="https://www.instagram.com/uneduvale" target="_blank" rel="noreferrer">@uneduvale</a></p>
+          </div>
+
+          <form id="contactForm" class="contact-card form-card" onsubmit="handleForm(event)">
+            <h2>Fale Conosco</h2>
+            <label>Nome<input type="text" name="name" required /></label>
+            <label>E-mail<input type="email" name="email" required /></label>
+            <label>Curso de interesse<input type="text" name="interest" placeholder="Análise e Desenvolvimento de Sistemas" /></label>
+            <label>Mensagem<textarea name="message" rows="4" required></textarea></label>
+            <button type="submit" class="btn btn-primary lava-btn">Enviar</button>
+          </form>
+        </div>
+      </section>
+
+      <p>&copy; 2026 Centro Tecnológico | Centro Universitário UNEDUVALE. Todos os direitos reservados.</p>
+      <p>Desenvolvido com ❤️ para um futuro mais conectado e inovador.</p>
+    </div>
+  </footer>
+
+
+  <button id="backToTopBtn" class="back-to-top-btn" aria-label="Voltar ao topo">↑</button>
+
+  <div id="toastContainer" class="toast-container"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="../javascript/app.js"></script>
+</body>
+</html>
