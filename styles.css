@@ -199,9 +199,9 @@ body {
   content: '';
   position: absolute;
   inset: 0;
-  background: url('../images/logo.png') center/cover no-repeat;
-  opacity: 0.14;
-  filter: blur(10px);
+  background: radial-gradient(circle at center, rgba(255,255,255,0.12), transparent 55%);
+  opacity: 0.16;
+  filter: blur(8px);
   transform: scale(1.05);
 }
 
