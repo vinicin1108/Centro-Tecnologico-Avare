@@ -1186,10 +1186,9 @@ body.dark-mode .glass-card {
   background: linear-gradient(135deg, rgba(18, 44, 84, 0.88), rgba(26, 95, 159, 0.94));
   color: #fff;
   overflow: hidden;
-  background-image: url('assets/home-bg.jpg');
+  background-image: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1800&q=80');
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
 }
 
 .hero-section::after {
