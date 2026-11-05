@@ -4,116 +4,136 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vestibular | Centro Tecnológico UNEDUVALE</title>
+  <meta name="description" content="Vestibular UNEDUVALE para o curso de Análise e Desenvolvimento de Sistemas." />
+  <meta name="theme-color" content="#0f243f" />
+  <script>
+    (function () {
+      document.documentElement.classList.add('js');
+      var t = null;
+      try { t = localStorage.getItem('theme'); } catch (e) {}
+      if (!t) t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      document.documentElement.dataset.theme = t;
+    })();
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&family=Raleway:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <script src="app.js" defer></script>
 </head>
 <body>
-  <div id="readingProgress" class="reading-progress"></div>
-  <div class="floating-blobs" aria-hidden="true">
-    <div class="blob blob-1"></div>
-    <div class="blob blob-2"></div>
-    <div class="blob blob-3"></div>
-  </div>
-  <div id="cursorSpotlight" class="cursor-spotlight" aria-hidden="true"></div>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
-  <header class="topbar" id="topbar">
-    <div class="container header-flex">
-      <a href="home.html" class="brand" aria-label="Centro Tecnológico UNEDUVALE">
-        <img src="assets/Logo-Centro-Tecnológico-Eduvale-site-300x104.png" alt="UNEDUVALE Logo" class="brand-logo" />
-      </a>
-      <nav class="main-nav" id="mainNav">
-        <a href="home.html#sobre">Institucional</a>
-        <a href="home.html#solucoes">Serviços</a>
-        <a href="cursos.html">Cursos</a>
-        <a href="projetos.html">Projetos</a>
-        <a href="agenda.html">Agenda</a>
-        <a href="docentes.html">Docentes</a>
-        <a href="inclusao.html">Inclusão Digital</a>
-        <a href="seguranca.html">Segurança</a>
-        <a href="contato.html">Contato</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand" aria-label="Centro Tecnológico UNEDUVALE — página inicial">
+          <span class="brand-mark" aria-hidden="true">CTE</span>
+          <span>Centro Tecnológico<small>UNEDUVALE · Avaré-SP</small></span>
+        </a>
+
+      <nav class="main-nav" id="mainNav" aria-label="Principal">
+          <a href="index.html">Início</a>
+          <a href="cursos.html">Cursos</a>
+          <a href="projetos.html">Projetos</a>
+          <a href="agenda.html">Agenda</a>
+          <a href="docentes.html">Docentes</a>
+          <a href="inclusao.html">Inclusão Digital</a>
+          <a href="seguranca.html">Segurança</a>
+          <a href="contato.html">Contato</a>
       </nav>
+
       <div class="header-actions">
-        <button id="darkModeBtn" class="dark-mode-btn" aria-label="Alternar tema">
-          <span class="dark-mode-thumb"></span>
+        <button type="button" class="icon-btn theme-toggle" aria-label="Alternar tema">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
         </button>
-        <a class="btn btn-cta" href="vestibular.html" style="text-decoration:none;">Inscreva-se</a>
-        <button id="burgerBtn" class="burger-btn" aria-label="Abrir menu">☰</button>
+        <a class="btn btn-primary btn-sm" href="vestibular.html">Inscreva-se</a>
+        <button type="button" class="icon-btn menu-toggle" aria-controls="mainNav" aria-expanded="false" aria-label="Abrir menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
       </div>
     </div>
   </header>
 
-  <div class="app-container">
-    <aside class="sidebar closed" id="sidebar">
-      <nav class="sidebar-nav">
-        <a href="home.html#sobre" class="sidebar-link">Institucional</a>
-        <a href="home.html#solucoes" class="sidebar-link">Serviços</a>
-        <a href="cursos.html" class="sidebar-link">Cursos</a>
-        <a href="projetos.html" class="sidebar-link">Projetos</a>
-        <a href="agenda.html" class="sidebar-link">Agenda</a>
-        <a href="docentes.html" class="sidebar-link">Docentes</a>
-        <a href="inclusao.html" class="sidebar-link">Inclusão Digital</a>
-        <a href="seguranca.html" class="sidebar-link">Segurança</a>
-        <a href="contato.html" class="sidebar-link">Contato</a>
-      </nav>
-    </aside>
-    <div id="sidebarOverlay" class="sidebar-overlay"></div>
+  <main id="conteudo">
+<section class="hero hero-sm">
+      <div class="container">
+        <span class="eyebrow">Vestibular</span>
+        <h1>Vestibular UNEDUVALE</h1>
+        <p>Último dia de inscrição: 25/04/2026 · Prova presencial: 29/04/2026.</p>
+      </div>
+    </section>
 
-    <main class="main-content">
-      <section class="section hero-section" id="hero">
-        <div class="container hero-content">
-          <h1 style="margin-bottom:0.75rem;">Vestibular 2026</h1>
-          <p class="hero-subtitle" style="max-width: 860px; margin:0 auto;">Último dia: 25/04/2026 · Prova presencial: 29/04/2026</p>
+    <section class="section">
+      <div class="container">
+        <div class="grid grid-2">
+          <article class="card reveal">
+            <h3>Como se inscrever</h3>
+            <p>Acesse <a href="https://vestibular.eduvaleavare.com.br" target="_blank" rel="noopener">vestibular.eduvaleavare.com.br</a>, preencha o formulário e realize o pagamento, com possibilidade de isenção parcial.</p>
+          </article>
+          <article class="card reveal">
+            <h3>Formas de ingresso</h3>
+            <p>Nota do ENEM, prova agendada ou transferência externa para o curso de ADS.</p>
+          </article>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="section glass-card" id="vestibular">
-        <div class="container">
-          <div class="section-heading">
-            <span class="section-label">Como participar</span>
-            <h2>Inscrição e etapas</h2>
-            <p class="subtitle">Acesse o site oficial, preencha o formulário e faça o pagamento.</p>
+    <section class="section" style="padding-top: 0;">
+      <div class="container">
+        <div class="cta-band reveal">
+          <div>
+            <h2>Ficou com alguma dúvida?</h2>
+            <p>Nossa equipe ajuda você em todas as etapas da inscrição.</p>
           </div>
-
-          <div class="info-grid" style="margin-top: 2rem;">
-            <article>
-              <h3>Inscrição</h3>
-              <p>
-                Acesse
-                <a href="https://vestibular.eduvaleavare.com.br" target="_blank" rel="noreferrer">vestibular.eduvaleavare.com.br</a>,
-                preencha o formulário e realize o pagamento com possibilidade de isenção parcial.
-              </p>
-            </article>
-            <article>
-              <h3>Modalidades</h3>
-              <p>
-                Entrada por nota de ENEM, prova agendada e transferência externa para o curso de ADS.
-              </p>
-            </article>
-          </div>
-
-          <div style="margin-top: 2rem; display:flex; gap: 1rem; flex-wrap: wrap;">
-            <a class="btn btn-cta" href="contato.html" style="text-decoration:none;">Falar com a Coordenação</a>
-            <a class="btn btn-secondary" href="cursos.html" style="text-decoration:none;">Voltar para Cursos</a>
+          <div class="cta-actions">
+            <a class="btn btn-primary" href="https://vestibular.eduvaleavare.com.br" target="_blank" rel="noopener">Fazer inscrição</a>
+            <a class="btn btn-outline" href="contato.html">Falar com a coordenação</a>
           </div>
         </div>
-      </section>
-    </main>
-  </div>
+      </div>
+    </section>
+  </main>
 
-  <footer class="footer">
-    <div class="container footer-grid">
-      <p>&copy; 2026 Centro Tecnológico | Centro Universitário UNEDUVALE. Todos os direitos reservados.</p>
-      <p>Desenvolvido com ❤️ para um futuro mais conectado e inovador.</p>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="brand" aria-label="Centro Tecnológico UNEDUVALE — página inicial">
+          <span class="brand-mark" aria-hidden="true">CTE</span>
+          <span>Centro Tecnológico<small>UNEDUVALE · Avaré-SP</small></span>
+        </a>
+          <p>Polo de tecnologia do Centro Universitário UNEDUVALE, dedicado ao curso de Análise e Desenvolvimento de Sistemas.</p>
+        </div>
+        <nav aria-label="Rodapé">
+          <h2>Navegação</h2>
+          <ul>
+            <li><a href="cursos.html">Cursos</a></li>
+            <li><a href="vestibular.html">Vestibular</a></li>
+            <li><a href="agenda.html">Agenda</a></li>
+            <li><a href="contato.html">Contato</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h2>Contato</h2>
+          <ul>
+            <li><a href="tel:+551437338585">(14) 3733-8585</a></li>
+            <li><a href="https://wa.me/5514996238383" target="_blank" rel="noopener">WhatsApp (14) 99623-8383</a></li>
+            <li><a href="mailto:comercial@eduvaleavare.com.br">comercial@eduvaleavare.com.br</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Redes sociais</h2>
+          <ul>
+            <li><a href="https://www.instagram.com/uneduvale" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="https://www.facebook.com/uneduvale" target="_blank" rel="noopener">Facebook</a></li>
+            <li><a href="https://www.youtube.com/@uneduvale" target="_blank" rel="noopener">YouTube</a></li>
+            <li><a href="https://www.tiktok.com/@uneduvale" target="_blank" rel="noopener">TikTok</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="footer-bottom">&copy; <span data-year>2026</span> Centro Tecnológico · Centro Universitário UNEDUVALE. Todos os direitos reservados.</p>
     </div>
   </footer>
-
-  <button id="backToTopBtn" class="back-to-top-btn" aria-label="Voltar ao topo">↑</button>
-  <div id="toastContainer" class="toast-container"></div>
-
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="app.js"></script>
 </body>
 </html>
-
