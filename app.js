@@ -123,7 +123,7 @@
       });
     });
 
-    const items = document.querySelectorAll('.reveal, .bars, .period');
+    const items = document.querySelectorAll('.reveal, .result-bars, .period');
     const counters = document.querySelectorAll('[data-count]');
 
     if (!('IntersectionObserver' in window) || reduceMotion) {
@@ -337,7 +337,28 @@
     }, 4500);
   }
 
+  /* ---------- Carrossel de depoimentos (Swiper) ---------- */
+  function setupSliders() {
+    if (typeof window.Swiper === 'undefined') return;
+    document.querySelectorAll('[data-slider]').forEach((el) => {
+      const section = el.closest('section');
+      new window.Swiper(el, {
+        slidesPerView: 1,
+        spaceBetween: 24,
+        speed: 700,
+        grabCursor: true,
+        loop: false,
+        autoplay: reduceMotion ? false : { delay: 5000, disableOnInteraction: false, pauseOnMouseEnter: true },
+        pagination: { el: section.querySelector('.swiper-pagination'), clickable: true },
+        navigation: { prevEl: section.querySelector('.slider-prev'), nextEl: section.querySelector('.slider-next') },
+        a11y: { prevSlideMessage: 'Depoimento anterior', nextSlideMessage: 'Próximo depoimento', paginationBulletMessage: 'Ir para o depoimento {{index}}' },
+        breakpoints: { 720: { slidesPerView: 2 }, 1080: { slidesPerView: 3 } }
+      });
+    });
+  }
+
   document.addEventListener('DOMContentLoaded', () => {
+    setupSliders();
     setupTheme();
     setupMenu();
     setupScroll();
