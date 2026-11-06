@@ -4,99 +4,101 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Projetos | Centro Tecnológico UNEDUVALE</title>
-  <meta name="description" content="Projetos desenvolvidos pelos alunos de ADS do Centro Tecnológico UNEDUVALE." />
+  <meta name="description" content="Projetos realizados com foco em entrega e impacto no Centro Tecnológico UNEDUVALE." />
   <meta name="theme-color" content="#0f243f" />
   <script>
     (function () {
-      document.documentElement.classList.add('js');
-      var t = null;
+      var d = document.documentElement, t = null;
+      d.classList.add('js');
       try { t = localStorage.getItem('theme'); } catch (e) {}
       if (!t) t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-      document.documentElement.dataset.theme = t;
+      d.dataset.theme = t;
     })();
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Instrument+Sans:wght@400..700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
   <script src="app.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <div class="read-progress" aria-hidden="true"></div>
 
   <header class="site-header">
     <div class="container header-inner">
-      <a href="index.html" class="brand" aria-label="Centro Tecnológico UNEDUVALE — página inicial">
+      <a href="index.html" class="brand" aria-label="Centro Tecnológico UNEDUVALE, página inicial">
           <span class="brand-mark" aria-hidden="true">CTE</span>
           <span>Centro Tecnológico<small>UNEDUVALE · Avaré-SP</small></span>
         </a>
 
       <nav class="main-nav" id="mainNav" aria-label="Principal">
-          <a href="index.html">Início</a>
-          <a href="cursos.html">Cursos</a>
-          <a href="projetos.html" aria-current="page">Projetos</a>
-          <a href="agenda.html">Agenda</a>
-          <a href="docentes.html">Docentes</a>
-          <a href="inclusao.html">Inclusão Digital</a>
-          <a href="seguranca.html">Segurança</a>
-          <a href="contato.html">Contato</a>
+        <a href="index.html#sobre">Institucional</a>
+        <a href="index.html#solucoes">Serviços</a>
+        <a href="cursos.html">Cursos</a>
+        <a href="projetos.html" aria-current="page">Projetos</a>
+        <a href="agenda.html">Agenda</a>
+        <a href="docentes.html">Docentes</a>
+        <a href="inclusao.html">Inclusão Digital</a>
+        <a href="seguranca.html">Segurança</a>
+        <a href="contato.html">Contato</a>
       </nav>
 
       <div class="header-actions">
-        <button type="button" class="icon-btn theme-toggle" aria-label="Alternar tema">
-          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
-          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <button type="button" class="theme-switch" aria-label="Alternar tema">
+          <span class="thumb">
+            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+            <svg class="icon-moon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+          </span>
         </button>
         <a class="btn btn-primary btn-sm" href="vestibular.html">Inscreva-se</a>
-        <button type="button" class="icon-btn menu-toggle" aria-controls="mainNav" aria-expanded="false" aria-label="Abrir menu">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        <button type="button" class="menu-toggle" aria-controls="mainNav" aria-expanded="false" aria-label="Abrir menu">
+          <span class="bars" aria-hidden="true"><span></span><span></span><span></span></span>
         </button>
       </div>
     </div>
   </header>
+  <div class="nav-overlay" aria-hidden="true"></div>
 
   <main id="conteudo">
-<section class="hero hero-sm">
-      <div class="container">
-        <span class="eyebrow">Projetos</span>
-        <h1>Projetos com foco em entrega</h1>
-        <p>Exemplos de projetos que você desenvolve ao longo do curso.</p>
+<section class="hero page-hero">
+      <span class="blob blob-1" aria-hidden="true"></span>
+      <span class="blob blob-3" aria-hidden="true"></span>
+      <div class="container hero-in">
+        <h1>Projetos</h1>
+        <p class="hero-subtitle">Projetos realizados com foco em entrega e impacto.</p>
       </div>
     </section>
 
     <section class="section">
       <div class="container">
-        <div class="grid">
-          <article class="card reveal">
-            <div class="card-icon" aria-hidden="true">📊</div>
-            <h3>Plataforma de Monitoramento Inteligente</h3>
-            <p>Dashboards, regras de negócio e integração com dados para apoiar decisões operacionais.</p>
-          </article>
-          <article class="card reveal">
-            <div class="card-icon" aria-hidden="true">🎨</div>
-            <h3>UX + Portal Institucional</h3>
-            <p>Portal com navegação e conteúdo organizados para melhorar o acesso e a leitura no celular.</p>
-          </article>
-          <article class="card reveal">
-            <div class="card-icon" aria-hidden="true">📚</div>
-            <h3>App de Aprendizagem por Projetos</h3>
-            <p>Trilhas e acompanhamento de atividades para facilitar a colaboração e a entrega em equipe.</p>
-          </article>
+        <div class="heading  reveal">
+          <span class="kicker">O que você vai construir</span>
+          <h2>Experiências práticas na faculdade</h2>
+          <p>Exemplos de projetos que você pode encontrar ao longo do curso.</p>
         </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <div class="cta-band reveal">
-          <div>
-            <h2>Comece sua carreira em tecnologia</h2>
-            <p>Inscreva-se no vestibular e venha estudar no Centro Tecnológico.</p>
-          </div>
-          <div class="cta-actions">
-            <a class="btn btn-primary" href="vestibular.html">Ver vestibular</a>
-            <a class="btn btn-outline" href="contato.html">Falar com a gente</a>
-          </div>
+        <div class="grid" data-stagger>
+          <article class="card project glow lift">
+            <div class="project-art" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg></div>
+            <div class="project-body">
+              <h3>Plataforma de Monitoramento Inteligente</h3>
+              <p>Dashboards, regras de negócio e integração com dados para apoiar decisões operacionais.</p>
+            </div>
+          </article>
+          <article class="card project glow lift">
+            <div class="project-art" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
+            <div class="project-body">
+              <h3>UX + Portal de Instituição</h3>
+              <p>Portfólio institucional com navegação e conteúdo organizado para melhor experiência no mobile.</p>
+            </div>
+          </article>
+          <article class="card project glow lift">
+            <div class="project-art" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5z"/><path d="M4 19.5A2.5 2.5 0 0 0 6.5 22H20v-5"/></svg></div>
+            <div class="project-body">
+              <h3>App de Aprendizagem por Projetos</h3>
+              <p>Trilhas e acompanhamento para facilitar colaboração e entrega em equipe.</p>
+            </div>
+          </article>
         </div>
       </div>
     </section>
@@ -106,11 +108,11 @@
     <div class="container">
       <div class="footer-grid">
         <div>
-          <a href="index.html" class="brand" aria-label="Centro Tecnológico UNEDUVALE — página inicial">
+          <a href="index.html" class="brand" aria-label="Centro Tecnológico UNEDUVALE, página inicial">
           <span class="brand-mark" aria-hidden="true">CTE</span>
           <span>Centro Tecnológico<small>UNEDUVALE · Avaré-SP</small></span>
         </a>
-          <p>Polo de tecnologia do Centro Universitário UNEDUVALE, dedicado ao curso de Análise e Desenvolvimento de Sistemas.</p>
+          <p>Desenvolvido com ❤️ para um futuro mais conectado e inovador.</p>
         </div>
         <nav aria-label="Rodapé">
           <h2>Navegação</h2>
@@ -139,8 +141,16 @@
           </ul>
         </div>
       </div>
-      <p class="footer-bottom">&copy; <span data-year>2026</span> Centro Tecnológico · Centro Universitário UNEDUVALE. Todos os direitos reservados.</p>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Centro Tecnológico | Centro Universitário UNEDUVALE. Todos os direitos reservados.</p>
+        <p>Avaré-SP</p>
+      </div>
     </div>
   </footer>
+
+  <button type="button" class="to-top" aria-label="Voltar ao topo">
+    <svg class="ring" viewBox="0 0 50 50" aria-hidden="true"><circle cx="25" cy="25" r="23"/></svg>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
 </body>
 </html>

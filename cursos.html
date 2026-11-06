@@ -4,259 +4,201 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cursos | Centro Tecnológico UNEDUVALE</title>
-  <meta name="description" content="Curso de Análise e Desenvolvimento de Sistemas da UNEDUVALE: grade curricular, tecnologias e perguntas frequentes." />
+  <meta name="description" content="Curso de Análise e Desenvolvimento de Sistemas da UNEDUVALE: visão geral e grade curricular." />
   <meta name="theme-color" content="#0f243f" />
   <script>
     (function () {
-      document.documentElement.classList.add('js');
-      var t = null;
+      var d = document.documentElement, t = null;
+      d.classList.add('js');
       try { t = localStorage.getItem('theme'); } catch (e) {}
       if (!t) t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-      document.documentElement.dataset.theme = t;
+      d.dataset.theme = t;
     })();
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Instrument+Sans:wght@400..700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
   <script src="app.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <div class="read-progress" aria-hidden="true"></div>
 
   <header class="site-header">
     <div class="container header-inner">
-      <a href="index.html" class="brand" aria-label="Centro Tecnológico UNEDUVALE — página inicial">
+      <a href="index.html" class="brand" aria-label="Centro Tecnológico UNEDUVALE, página inicial">
           <span class="brand-mark" aria-hidden="true">CTE</span>
           <span>Centro Tecnológico<small>UNEDUVALE · Avaré-SP</small></span>
         </a>
 
       <nav class="main-nav" id="mainNav" aria-label="Principal">
-          <a href="index.html">Início</a>
-          <a href="cursos.html" aria-current="page">Cursos</a>
-          <a href="projetos.html">Projetos</a>
-          <a href="agenda.html">Agenda</a>
-          <a href="docentes.html">Docentes</a>
-          <a href="inclusao.html">Inclusão Digital</a>
-          <a href="seguranca.html">Segurança</a>
-          <a href="contato.html">Contato</a>
+        <a href="index.html#sobre">Institucional</a>
+        <a href="index.html#solucoes">Serviços</a>
+        <a href="cursos.html" aria-current="page">Cursos</a>
+        <a href="projetos.html">Projetos</a>
+        <a href="agenda.html">Agenda</a>
+        <a href="docentes.html">Docentes</a>
+        <a href="inclusao.html">Inclusão Digital</a>
+        <a href="seguranca.html">Segurança</a>
+        <a href="contato.html">Contato</a>
       </nav>
 
       <div class="header-actions">
-        <button type="button" class="icon-btn theme-toggle" aria-label="Alternar tema">
-          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
-          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <button type="button" class="theme-switch" aria-label="Alternar tema">
+          <span class="thumb">
+            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+            <svg class="icon-moon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+          </span>
         </button>
         <a class="btn btn-primary btn-sm" href="vestibular.html">Inscreva-se</a>
-        <button type="button" class="icon-btn menu-toggle" aria-controls="mainNav" aria-expanded="false" aria-label="Abrir menu">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        <button type="button" class="menu-toggle" aria-controls="mainNav" aria-expanded="false" aria-label="Abrir menu">
+          <span class="bars" aria-hidden="true"><span></span><span></span><span></span></span>
         </button>
       </div>
     </div>
   </header>
+  <div class="nav-overlay" aria-hidden="true"></div>
 
   <main id="conteudo">
-<section class="hero hero-sm">
-      <div class="container">
-        <span class="eyebrow">Cursos</span>
-        <h1>Análise e Desenvolvimento de Sistemas</h1>
-        <p>Formação completa com prática, laboratórios e projetos reais.</p>
+<section class="hero page-hero">
+      <span class="blob blob-1" aria-hidden="true"></span>
+      <span class="blob blob-3" aria-hidden="true"></span>
+      <div class="container hero-in">
+        <h1>Cursos</h1>
+        <p class="hero-subtitle">Formação completa em Análise e Desenvolvimento de Sistemas com prática, laboratórios e projetos reais.</p>
+        <div class="hero-actions"><a class="btn btn-primary" href="vestibular.html" data-magnetic>Inscreva-se</a></div>
       </div>
     </section>
 
     <section class="section">
       <div class="container">
-        <article class="course-card reveal">
+        <div class="heading  reveal">
+          <span class="kicker">Curso</span>
+          <h2>Análise e Desenvolvimento de Sistemas</h2>
+          <p>Visão rápida + grade curricular do curso.</p>
+        </div>
+        <article class="course reveal">
           <div>
             <span class="tag">Tecnologia</span>
-            <p class="facts">3 anos · 6 períodos · 1.800 horas</p>
-            <p>Formação em desenvolvimento full-stack, computação em nuvem, ciência de dados e DevOps, com preparação real para o mercado de trabalho.</p>
-            <a class="btn btn-primary" href="vestibular.html">Inscreva-se</a>
+            <h3>Análise e Desenvolvimento de Sistemas</h3>
+            <ul class="facts"><li>3 anos</li><li>6 períodos</li><li>1.800 horas</li></ul>
+            <p>Formação completa em desenvolvimento full-stack, computação em nuvem, ciência de dados e DevOps.</p>
           </div>
-          <ul class="pill-list" aria-label="Destaques do curso">
-            <li>🎯 Estágio supervisionado</li>
-            <li>🖥️ Laboratórios modernos</li>
-            <li>🏆 Hackathons</li>
-            <li>🤝 Parcerias com empresas</li>
+          <ul class="highlights">
+            <li><span class="emoji" aria-hidden="true">🎯</span> Estágio garantido</li>
+            <li><span class="emoji" aria-hidden="true">🖥️</span> Laboratórios modernos</li>
+            <li><span class="emoji" aria-hidden="true">🏆</span> Hackathons</li>
+            <li><span class="emoji" aria-hidden="true">🤝</span> Parcerias com empresas</li>
           </ul>
         </article>
       </div>
     </section>
 
-    <section class="section section-alt" id="grade">
+    <section id="grade" class="section section-tint">
       <div class="container">
-        <div class="section-heading">
-          <span class="eyebrow">Grade curricular</span>
+        <div class="heading  reveal">
+          <span class="kicker">Grade Curricular</span>
           <h2>Disciplinas por período</h2>
-          <p class="lead">6 períodos de formação intensiva e prática.</p>
         </div>
-        <div class="periods">
-          <article class="card period reveal">
+        <div class="timeline">
+          <span class="timeline-fill" aria-hidden="true"></span>
+          <article class="period card glow">
+            <span class="period-marker" aria-hidden="true">1</span>
             <div class="period-head">
-              <span class="period-num" aria-hidden="true">1</span>
               <h3>1º Período — Fundamentos</h3>
+              <span class="period-hours">300h</span>
             </div>
             <p>Base sólida em lógica, algoritmos e pensamento computacional.</p>
             <ul class="subjects">
-              <li>Banco de Dados <em>60h</em></li>
-              <li>Aplicações Web I <em>80h</em></li>
-              <li>Introdução a Sistemas de Informação <em>60h</em></li>
-              <li>Matemática Aplicada <em>60h</em></li>
-              <li>Arquitetura e Organização de Computadores <em>60h</em></li>
-            </ul>
-            <ul class="pill-list" aria-label="Tecnologias">
-              <li>🐍 Python</li>
-              <li>📊 MySQL</li>
-              <li>🧮 Lógica</li>
+              <li><span class="subject-tag teoria">Teoria</span> Introdução à Programação <em>80h</em></li>
+              <li><span class="subject-tag teoria">Teoria</span> Lógica de Programação <em>60h</em></li>
+              <li><span class="subject-tag pratica">Prática</span> Banco de Dados I (SQL) <em>60h</em></li>
             </ul>
           </article>
-          <article class="card period reveal">
+          <article class="period card glow">
+            <span class="period-marker" aria-hidden="true">2</span>
             <div class="period-head">
-              <span class="period-num" aria-hidden="true">2</span>
               <h3>2º Período — Estruturas</h3>
+              <span class="period-hours">300h</span>
             </div>
-            <p>Programação orientada a objetos, estruturas de dados e sistemas operacionais.</p>
+            <p>Aprofundamento em POO, estruturas de dados e redes de computadores.</p>
             <ul class="subjects">
-              <li>Programação Orientada a Objetos <em>80h</em></li>
-              <li>Aplicações Web II <em>80h</em></li>
-              <li>Engenharia de Software <em>60h</em></li>
-              <li>Estrutura de Dados <em>60h</em></li>
-              <li>Sistemas Operacionais <em>60h</em></li>
-            </ul>
-            <ul class="pill-list" aria-label="Tecnologias">
-              <li>☕ Java</li>
-              <li>🗄️ MongoDB</li>
-              <li>🧱 POO</li>
+              <li><span class="subject-tag pratica">Prática</span> Programação Orientada a Objetos <em>80h</em></li>
+              <li><span class="subject-tag teoria">Teoria</span> Estrutura de Dados <em>60h</em></li>
+              <li><span class="subject-tag pratica">Prática</span> Banco de Dados II (NoSQL) <em>60h</em></li>
             </ul>
           </article>
-          <article class="card period reveal">
+          <article class="period card glow">
+            <span class="period-marker" aria-hidden="true">3</span>
             <div class="period-head">
-              <span class="period-num" aria-hidden="true">3</span>
               <h3>3º Período — Web & Software</h3>
+              <span class="period-hours">300h</span>
             </div>
-            <p>Desenvolvimento web, redes e primeiras arquiteturas.</p>
+            <p>Desenvolvimento web, engenharia de software e primeiras arquiteturas.</p>
             <ul class="subjects">
-              <li>Desenvolvimento Frontend <em>80h</em></li>
-              <li>Desenvolvimento Backend <em>80h</em></li>
-              <li>Redes de Computadores <em>60h</em></li>
-              <li>Modelagem de Sistemas <em>60h</em></li>
-              <li>Banco de Dados Avançado <em>60h</em></li>
-            </ul>
-            <ul class="pill-list" aria-label="Tecnologias">
-              <li>⚛️ React</li>
-              <li>🐳 Docker</li>
-              <li>🌐 TCP/IP</li>
+              <li><span class="subject-tag pratica">Prática</span> Desenvolvimento Frontend <em>80h</em></li>
+              <li><span class="subject-tag pratica">Prática</span> Desenvolvimento Backend <em>80h</em></li>
+              <li><span class="subject-tag teoria">Teoria</span> Arquitetura de Sistemas <em>60h</em></li>
             </ul>
           </article>
-          <article class="card period reveal">
+          <article class="period card glow">
+            <span class="period-marker" aria-hidden="true">4</span>
             <div class="period-head">
-              <span class="period-num" aria-hidden="true">4</span>
               <h3>4º Período — Full-Stack</h3>
+              <span class="period-hours">300h</span>
             </div>
-            <p>Aplicações completas com front-end, back-end e mobile.</p>
+            <p>Construção de aplicações completas com front-end, back-end e mobile.</p>
             <ul class="subjects">
-              <li>Desenvolvimento Mobile <em>80h</em></li>
-              <li>Segurança da Informação <em>60h</em></li>
-              <li>Frameworks Web <em>60h</em></li>
-              <li>Qualidade e Testes de Software <em>60h</em></li>
-              <li>Metodologias Ágeis <em>60h</em></li>
-            </ul>
-            <ul class="pill-list" aria-label="Tecnologias">
-              <li>🟢 Node.js</li>
-              <li>📱 Mobile</li>
-              <li>🔒 OWASP</li>
+              <li><span class="subject-tag pratica">Prática</span> Desenvolvimento Mobile <em>80h</em></li>
+              <li><span class="subject-tag teoria">Teoria</span> Segurança da Informação <em>60h</em></li>
+              <li><span class="subject-tag pratica">Prática</span> Qualidade e Testes <em>60h</em></li>
             </ul>
           </article>
-          <article class="card period reveal">
+          <article class="period card glow">
+            <span class="period-marker" aria-hidden="true">5</span>
             <div class="period-head">
-              <span class="period-num" aria-hidden="true">5</span>
               <h3>5º Período — Cloud & Dados</h3>
+              <span class="period-hours">300h</span>
             </div>
-            <p>Computação em nuvem, inteligência artificial e IoT.</p>
+            <p>Computação em nuvem, ciência de dados e arquiteturas escaláveis.</p>
             <ul class="subjects">
-              <li>Cloud Computing <em>80h</em></li>
-              <li>Inteligência Artificial <em>60h</em></li>
-              <li>Internet das Coisas (IoT) <em>60h</em></li>
-              <li>Gestão de Projetos de TI <em>60h</em></li>
-              <li>Projeto Integrador I <em>60h</em></li>
-            </ul>
-            <ul class="pill-list" aria-label="Tecnologias">
-              <li>☁️ AWS</li>
-              <li>🤖 IA</li>
-              <li>🚀 Kubernetes</li>
+              <li><span class="subject-tag pratica">Prática</span> Cloud Computing <em>80h</em></li>
+              <li><span class="subject-tag teoria">Teoria</span> Inteligência Artificial <em>60h</em></li>
+              <li><span class="subject-tag projeto">Projeto</span> Projeto Integrador I <em>60h</em></li>
             </ul>
           </article>
-          <article class="card period reveal">
+          <article class="period card glow">
+            <span class="period-marker" aria-hidden="true">6</span>
             <div class="period-head">
-              <span class="period-num" aria-hidden="true">6</span>
               <h3>6º Período — Mercado & TCC</h3>
+              <span class="period-hours">300h</span>
             </div>
-            <p>Governança, empreendedorismo e trabalho de conclusão de curso.</p>
+            <p>Gestão de projetos, empreendedorismo e trabalho de conclusão.</p>
             <ul class="subjects">
-              <li>Governança de TI <em>60h</em></li>
-              <li>Empreendedorismo e Inovação <em>60h</em></li>
-              <li>Análise de Dados / Big Data <em>60h</em></li>
-              <li>Projeto Integrador II ou TCC <em>80h</em></li>
-              <li>Estágio Supervisionado <em>40h</em></li>
-            </ul>
-            <ul class="pill-list" aria-label="Tecnologias">
-              <li>📈 Dados</li>
-              <li>📊 Gestão</li>
-              <li>🎓 TCC</li>
+              <li><span class="subject-tag teoria">Teoria</span> Governança de TI <em>60h</em></li>
+              <li><span class="subject-tag pratica">Prática</span> Big Data / Análise de Dados <em>60h</em></li>
+              <li><span class="subject-tag projeto">TCC</span> Estágio Supervisionado + TCC <em>80h</em></li>
             </ul>
           </article>
         </div>
-      </div>
-    </section>
-
-    <section class="section" id="faq">
-      <div class="container">
-        <div class="section-heading">
-          <span class="eyebrow">Dúvidas</span>
-          <h2>Perguntas frequentes</h2>
-        </div>
-        <div class="faq">
-          <details>
-            <summary>Como funciona o curso de Análise e Desenvolvimento de Sistemas?</summary>
-            <div class="answer">
-              <p>O curso de ADS da UNEDUVALE é estruturado em 6 períodos, totalizando 3 anos de formação. A metodologia combina fundamentos teóricos com forte ênfase na prática profissional, preparando o aluno para todas as etapas do ciclo de vida de um software — da análise de requisitos ao deploy, manutenção e escalabilidade.</p>
-              <p>Desde o primeiro período, os alunos têm contato com programação, lógica e bancos de dados. Ao longo dos semestres, a grade avança para desenvolvimento web full-stack, arquitetura de software, computação em nuvem, DevOps, ciência de dados e segurança da informação.</p>
-            </div>
-          </details>
-          <details>
-            <summary>Quais tecnologias e ferramentas são ensinadas?</summary>
-            <div class="answer">
-              <p>A grade é atualizada para acompanhar o mercado, com conteúdos de front-end, back-end, mobile, dados e infraestrutura.</p>
-              <p>No <strong>front-end</strong>: HTML5 semântico, CSS3 (Flexbox e Grid), JavaScript, TypeScript e React. No <strong>back-end</strong>: Node.js, Python e Java, APIs REST e testes automatizados.</p>
-            </div>
-          </details>
-          <details>
-            <summary>Como funcionam o estágio e as parcerias com empresas?</summary>
-            <div class="answer">
-              <p>A UNEDUVALE mantém parcerias com empresas de tecnologia da região de Avaré-SP, criando oportunidades de estágio, trainee e contratação. O estágio é incentivado a partir do 3º período, quando o aluno já tem base técnica para contribuir em projetos reais.</p>
-            </div>
-          </details>
-          <details>
-            <summary>Qual a diferença entre ADS e Ciência da Computação?</summary>
-            <div class="answer">
-              <p>ADS é um curso tecnólogo de 3 anos, com foco prático e entrada rápida no mercado. Ciência da Computação é um bacharelado de 4 anos, mais teórico. O ADS é voltado ao desenvolvimento de software e a projetos reais desde o primeiro período.</p>
-            </div>
-          </details>
+        <div class="legend reveal">
+          <h4>Legenda das Disciplinas</h4>
+          <span><span class="legend-dot teoria"></span> Teoria</span>
+          <span><span class="legend-dot pratica"></span> Prática</span>
+          <span><span class="legend-dot projeto"></span> Projeto / TCC</span>
         </div>
       </div>
     </section>
 
     <section class="section">
       <div class="container">
-        <div class="cta-band reveal">
+        <div class="cta reveal">
           <div>
-            <h2>Comece sua carreira em tecnologia</h2>
-            <p>Inscreva-se no vestibular e venha estudar no Centro Tecnológico.</p>
+            <h2>Pronto para conhecer o Vestibular?</h2>
+            <p>Inscrições abertas para 2026.</p>
           </div>
-          <div class="cta-actions">
-            <a class="btn btn-primary" href="vestibular.html">Ver vestibular</a>
-            <a class="btn btn-outline" href="contato.html">Falar com a gente</a>
-          </div>
+          <a class="btn btn-primary" href="vestibular.html" data-magnetic>Ir para Vestibular</a>
         </div>
       </div>
     </section>
@@ -266,11 +208,11 @@
     <div class="container">
       <div class="footer-grid">
         <div>
-          <a href="index.html" class="brand" aria-label="Centro Tecnológico UNEDUVALE — página inicial">
+          <a href="index.html" class="brand" aria-label="Centro Tecnológico UNEDUVALE, página inicial">
           <span class="brand-mark" aria-hidden="true">CTE</span>
           <span>Centro Tecnológico<small>UNEDUVALE · Avaré-SP</small></span>
         </a>
-          <p>Polo de tecnologia do Centro Universitário UNEDUVALE, dedicado ao curso de Análise e Desenvolvimento de Sistemas.</p>
+          <p>Desenvolvido com ❤️ para um futuro mais conectado e inovador.</p>
         </div>
         <nav aria-label="Rodapé">
           <h2>Navegação</h2>
@@ -299,8 +241,16 @@
           </ul>
         </div>
       </div>
-      <p class="footer-bottom">&copy; <span data-year>2026</span> Centro Tecnológico · Centro Universitário UNEDUVALE. Todos os direitos reservados.</p>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Centro Tecnológico | Centro Universitário UNEDUVALE. Todos os direitos reservados.</p>
+        <p>Avaré-SP</p>
+      </div>
     </div>
   </footer>
+
+  <button type="button" class="to-top" aria-label="Voltar ao topo">
+    <svg class="ring" viewBox="0 0 50 50" aria-hidden="true"><circle cx="25" cy="25" r="23"/></svg>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
 </body>
 </html>

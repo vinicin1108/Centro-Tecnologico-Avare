@@ -4,121 +4,103 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contato | Centro Tecnológico UNEDUVALE</title>
-  <meta name="description" content="Fale com o Centro Tecnológico UNEDUVALE: telefone, WhatsApp, e-mail e localização." />
+  <meta name="description" content="Fale com o Centro Tecnológico UNEDUVALE: telefones, WhatsApp, e-mail, formulário e localização." />
   <meta name="theme-color" content="#0f243f" />
   <script>
     (function () {
-      document.documentElement.classList.add('js');
-      var t = null;
+      var d = document.documentElement, t = null;
+      d.classList.add('js');
       try { t = localStorage.getItem('theme'); } catch (e) {}
       if (!t) t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-      document.documentElement.dataset.theme = t;
+      d.dataset.theme = t;
     })();
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Instrument+Sans:wght@400..700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
   <script src="app.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <div class="read-progress" aria-hidden="true"></div>
 
   <header class="site-header">
     <div class="container header-inner">
-      <a href="index.html" class="brand" aria-label="Centro Tecnológico UNEDUVALE — página inicial">
+      <a href="index.html" class="brand" aria-label="Centro Tecnológico UNEDUVALE, página inicial">
           <span class="brand-mark" aria-hidden="true">CTE</span>
           <span>Centro Tecnológico<small>UNEDUVALE · Avaré-SP</small></span>
         </a>
 
       <nav class="main-nav" id="mainNav" aria-label="Principal">
-          <a href="index.html">Início</a>
-          <a href="cursos.html">Cursos</a>
-          <a href="projetos.html">Projetos</a>
-          <a href="agenda.html">Agenda</a>
-          <a href="docentes.html">Docentes</a>
-          <a href="inclusao.html">Inclusão Digital</a>
-          <a href="seguranca.html">Segurança</a>
-          <a href="contato.html" aria-current="page">Contato</a>
+        <a href="index.html#sobre">Institucional</a>
+        <a href="index.html#solucoes">Serviços</a>
+        <a href="cursos.html">Cursos</a>
+        <a href="projetos.html">Projetos</a>
+        <a href="agenda.html">Agenda</a>
+        <a href="docentes.html">Docentes</a>
+        <a href="inclusao.html">Inclusão Digital</a>
+        <a href="seguranca.html">Segurança</a>
+        <a href="contato.html" aria-current="page">Contato</a>
       </nav>
 
       <div class="header-actions">
-        <button type="button" class="icon-btn theme-toggle" aria-label="Alternar tema">
-          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
-          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <button type="button" class="theme-switch" aria-label="Alternar tema">
+          <span class="thumb">
+            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+            <svg class="icon-moon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+          </span>
         </button>
         <a class="btn btn-primary btn-sm" href="vestibular.html">Inscreva-se</a>
-        <button type="button" class="icon-btn menu-toggle" aria-controls="mainNav" aria-expanded="false" aria-label="Abrir menu">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        <button type="button" class="menu-toggle" aria-controls="mainNav" aria-expanded="false" aria-label="Abrir menu">
+          <span class="bars" aria-hidden="true"><span></span><span></span><span></span></span>
         </button>
       </div>
     </div>
   </header>
+  <div class="nav-overlay" aria-hidden="true"></div>
 
   <main id="conteudo">
-<section class="hero hero-sm">
-      <div class="container">
-        <span class="eyebrow">Contato</span>
-        <h1>Fale com a gente</h1>
-        <p>Atendimento de segunda a domingo, das 8h às 22h.</p>
+<section class="hero page-hero">
+      <span class="blob blob-1" aria-hidden="true"></span>
+      <span class="blob blob-3" aria-hidden="true"></span>
+      <div class="container hero-in">
+        <h1>Contato</h1>
+        <p class="hero-subtitle">Tire suas dúvidas com o time do Centro Tecnológico.</p>
       </div>
     </section>
 
     <section class="section">
-      <div class="container">
-        <div class="grid grid-2">
-          <article class="card">
-            <h2>Atendimento</h2>
-            <dl class="contact-list">
-              <div>
-                <dt>Telefone</dt>
-                <dd><a href="tel:+551437338585">(14) 3733-8585</a> · <a href="tel:+551437338383">(14) 3733-8383</a></dd>
-              </div>
-              <div>
-                <dt>WhatsApp</dt>
-                <dd><a href="https://wa.me/5514996238383" target="_blank" rel="noopener">(14) 99623-8383</a></dd>
-              </div>
-              <div>
-                <dt>E-mail</dt>
-                <dd><a href="mailto:comercial@eduvaleavare.com.br">comercial@eduvaleavare.com.br</a></dd>
-              </div>
-              <div>
-                <dt>Centro Tecnológico (CTE)</dt>
-                <dd>Rua Goiás, 1121 — 2º andar do HVET, Avaré-SP</dd>
-              </div>
-              <div>
-                <dt>Campus UNEDUVALE</dt>
-                <dd>Av. Pref. Misael Euphrásio Leal, 347, Avaré-SP</dd>
-              </div>
-            </dl>
-          </article>
-
-          <form id="contactForm" class="card form" data-to="comercial@eduvaleavare.com.br">
-            <h2>Envie uma mensagem</h2>
-            <label>Nome
-              <input type="text" name="name" autocomplete="name" required />
-            </label>
-            <label>E-mail
-              <input type="email" name="email" autocomplete="email" required />
-            </label>
-            <label>Curso de interesse
-              <input type="text" name="interest" placeholder="Análise e Desenvolvimento de Sistemas" />
-            </label>
-            <label>Mensagem
-              <textarea name="message" rows="4" required></textarea>
-            </label>
-            <button type="submit" class="btn btn-primary">Enviar</button>
-            <p class="form-note">Ao enviar, seu aplicativo de e-mail será aberto com a mensagem pronta.</p>
-          </form>
+      <div class="container contact-layout">
+        <article class="card contact-card reveal">
+          <h2>Fale com a UNEDUVALE</h2>
+          <dl class="contact-list">
+            <div><dt>Endereço</dt><dd>Av. Pref. Misael Euphrásio Leal, 347, Avaré-SP</dd></div>
+            <div><dt>Telefones</dt><dd>📞 <a href="tel:+551437338585">(14) 3733-8585</a> | <a href="tel:+551437338383">(14) 3733-8383</a> | WhatsApp <a href="https://wa.me/5514996238383" target="_blank" rel="noopener">(14) 99623-8383</a></dd></div>
+            <div><dt>E-mail</dt><dd>✉️ <a href="mailto:comercial@eduvaleavare.com.br">comercial@eduvaleavare.com.br</a></dd></div>
+            <div><dt>Instagram</dt><dd><a href="https://www.instagram.com/uneduvale" target="_blank" rel="noopener">@uneduvale</a></dd></div>
+          </dl>
+        </article>
+        <div class="reveal">
+        <form id="contactForm" class="card form" data-to="comercial@eduvaleavare.com.br">
+          <h2>Fale Conosco</h2>
+          <div class="field"><input id="f-name" type="text" name="name" autocomplete="name" placeholder=" " required /><label for="f-name">Nome</label></div>
+          <div class="field"><input id="f-email" type="email" name="email" autocomplete="email" placeholder=" " required /><label for="f-email">E-mail</label></div>
+          <div class="field"><input id="f-interest" type="text" name="interest" placeholder="Análise e Desenvolvimento de Sistemas" /><label for="f-interest">Curso de interesse</label></div>
+          <div class="field"><textarea id="f-message" name="message" rows="4" placeholder=" " required></textarea><label for="f-message">Mensagem</label></div>
+          <button type="submit" class="btn btn-dark">Enviar</button>
+          <p class="form-note">Ao enviar, seu aplicativo de e-mail abre com a mensagem pronta.</p>
+        </form>
         </div>
-
-        <div class="map">
-          <iframe
-            src="https://www.google.com/maps?q=Rua%20Goi%C3%A1s%2C%201121%2C%20Avar%C3%A9%20-%20SP&amp;output=embed"
-            title="Mapa: Centro Tecnológico UNEDUVALE, Rua Goiás 1121, Avaré-SP"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
+      </div>
+      <div class="container" style="margin-top: 1.5rem;">
+        <article class="card reveal">
+          <h2>Localização</h2>
+          <div class="map">
+            <iframe src="https://www.google.com/maps?q=Av.%20Pref.%20Misael%20Euphr%C3%A1sio%20Leal%2C%20347%2C%20Avar%C3%A9%20-%20SP&amp;output=embed" title="Mapa de localização da UNEDUVALE" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+          </div>
+          <p class="map-phrase">Venha conhecer o lugar onde tecnologia, paixão e futuro se encontram para transformar sua carreira.</p>
+        </article>
       </div>
     </section>
   </main>
@@ -127,11 +109,11 @@
     <div class="container">
       <div class="footer-grid">
         <div>
-          <a href="index.html" class="brand" aria-label="Centro Tecnológico UNEDUVALE — página inicial">
+          <a href="index.html" class="brand" aria-label="Centro Tecnológico UNEDUVALE, página inicial">
           <span class="brand-mark" aria-hidden="true">CTE</span>
           <span>Centro Tecnológico<small>UNEDUVALE · Avaré-SP</small></span>
         </a>
-          <p>Polo de tecnologia do Centro Universitário UNEDUVALE, dedicado ao curso de Análise e Desenvolvimento de Sistemas.</p>
+          <p>Desenvolvido com ❤️ para um futuro mais conectado e inovador.</p>
         </div>
         <nav aria-label="Rodapé">
           <h2>Navegação</h2>
@@ -160,8 +142,16 @@
           </ul>
         </div>
       </div>
-      <p class="footer-bottom">&copy; <span data-year>2026</span> Centro Tecnológico · Centro Universitário UNEDUVALE. Todos os direitos reservados.</p>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Centro Tecnológico | Centro Universitário UNEDUVALE. Todos os direitos reservados.</p>
+        <p>Avaré-SP</p>
+      </div>
     </div>
   </footer>
+
+  <button type="button" class="to-top" aria-label="Voltar ao topo">
+    <svg class="ring" viewBox="0 0 50 50" aria-hidden="true"><circle cx="25" cy="25" r="23"/></svg>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
 </body>
 </html>
